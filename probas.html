@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <title>Proba Contorno Cliente</title>
+  <body>
+    <h1>Hola Mundo</h1>
+
+    <script>
+      /**
+      let num1 = 2;
+      let num2 = 3;
+      let suma = num1 + num2;
+      console.log(suma);
+      document.writeln(
+        "Suma de 3 + 2 = " + "<strong>" + suma + "</strong>" + "<br>"
+      );
+
+      let nombre = prompt("Introduce o nombre");
+      document.writeln("Nome: " + "<strong>" + nombre + "</strong>" + "<br>");
+
+      let apellidos = prompt("Introduce tus apellidos");
+      document.writeln(
+        "Apellidos: " + "<strong>" + apellidos + "</strong>" + "<br>"
+      );
+
+      let edad = prompt("Introduce tu edad");
+      document.writeln("Edad: " + "<strong>" + edad + "</strong>" + "<br>");
+
+
+      document.write(
+        `C:\\\\usuario\\tarda 1'23", algo considerado "lento" en la actualidad`
+      );
+
+    var numerobinario =0b100100;
+    var decimal=3.16547;
+    var potencia=2e+2;
+    var numerohexadecimal=0x26;
+    var divisionPorCero=23/0;
+    var outraOp=divisionPorCero+12;
+
+    console.log(numerobinario);
+    console.log(decimal);
+    console.log(potencia);
+    console.log(numerohexadecimal);
+    console.log(outraOp);
+
+
+    document.write("<br>" + Number.MIN_SAFE_INTEGER + "<br>");
+    document.write(Number.MAX_SAFE_INTEGER + "<br>");
+
+    let numeromax = Number.MAX_SAFE_INTEGER;
+
+    console.log(typeof(numeromax));
+    
+    console.log(typeof(edad));
+    
+    var cadenaNumero=12+"5";
+    console.log(typeof(cadenaNumero));
+
+    var cadenaMultiplicacion="66"*11;
+    console.log(typeof(cadenaMultiplicacion));
+
+    ano = 2023;
+    document.write("El año de nacimiento es: " + `${(ano-Number(edad))} <br>`);
+    
+    //let mensaxe ="¿Estas seguro de querer eliminar?";
+    //let resposta=confirm(mensaxe);
+    //console.log(`Resposta do cadro de dálogo :${resposta}.`);
+    
+    //const PI=3.14459;
+    //alert(`Lembra usar aproximacion nos teus cálculos: ${PI}`);
+
+    let binario=0b1111;
+    let b=2;
+    binario = binario<<b;
+    console.log(binario);
+
+    let idade=21;
+    let mensaxe=(idade>18) ? "Maior" : "Menor";
+    console.log(`O usuario é ${mensaxe} de idade`);
+
+
+
+
+    let numero1 = prompt("Introduce un numero");
+    document.writeln("1º numero: " + "<strong>" + numero1 + "</strong>" + "<br>");
+    
+    let numero2 = prompt("Introduce otro numero");
+    document.writeln("2º numero: " + "<strong>" + numero2 + "</strong>" + "<br>");
+    
+    let numero3 = prompt("Introduce otro numero");
+    document.writeln("3º numero: " + "<strong>" + numero3 + "</strong>" + "<br>");
+
+    if (numero1 >= numero2 && numero1>numero3){
+      console.log(`${numero1} es el mayor`);
+    } else if(numero2>=numero1 && numero2>=numero3){
+      console.log(`${numero2} es el mayor`);
+    } else {
+      console.log(`${numero3} es el mayor`);
+    }
+
+    if(numero1<=numero2 && numero1<numero3){
+      console.log(`${numero1} es el menor.`);
+    } else if(numero2<numero1 && numero2<numero3){
+      console.log(`${numero2} es el menor.`);
+    } else{
+      console.log(`${numero3} es el menor.`);
+    }
+**/
+/**
+    let numeroLetra = prompt("Introduce un numero para pasar a letra del 1-10");
+    numeroLetra=Number(numeroLetra);
+
+    switch(numeroLetra){
+      case 1:
+        console.log("Uno.");
+        break;
+      case 2:
+        console.log("Dos");
+        break;
+      case 3:
+        console.log("Tres");
+        break;
+      case 4:
+        console.log("Cuetro");
+        break;
+      case 5:
+        console.log("Cinco");
+        break;
+      case 6:
+        console.log("Seis");
+        break;
+        case 7:
+        console.log("Siete");
+        break;
+      case 8:
+        console.log("Ocho");
+        break;
+      case 9:
+        console.log("Nueve");
+        break;
+      case 10:
+        console.log("Diez");
+        break;
+    }
+**/
+/**
+let pases=0;
+do{
+  console.log(`Pase número ${pases}`);
+  pases++
+} while (pases<10);
+**/
+
+/**let impares=0;
+do{
+  if(impares%2!=0){
+    console.log(`${impares}`);
+  }
+  impares++;
+} while (impares<1000);
+
+let texto1="Oso";
+let texto2="Ñu";
+console.log(texto1.localeCompare(texto2,"es"));
+
+let texto='casa';
+console.log(texto.length);
+
+let texto3='casona';
+console.log(texto3.charAt(5));
+
+texto2='al alba, amigo mío, al alba';
+console.log(texto2.toUpperCase());
+
+let texto4='dime onde está a o texto';
+document.write(texto4.lastIndexOf('o'));
+
+var texto5='Esto é unha estructura estática';
+console.log(texto5.replace('st','xxtt'));
+
+let texto6= ' texto con moitos espazos ';
+console.log('-'+texto6.trim()+'-');
+
+let texto7='Esta é unha estructura estática';
+console.log(texto7.slice(3,10));
+**/
+
+/** EXERCICIO
+ * Introducir o texto
+ * Dime donde esta o texto
+ * da igual mayusc que minusc
+ * */
+
+ contador=0;
+ let cadena=prompt('Introduce el texto: ');
+ posicion = cadena.indexOf('a');
+ while(posicion!=-1){
+  contador++;
+  posicion=cadena.indexOf('a',posicion+1);
+  console.log('posicion');
+ }
+ 
+
+    </script>
+  </body>
+</html>
