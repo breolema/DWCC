@@ -5,7 +5,14 @@
     <h1>Exercicio 3</h1>
     <script>
         let numeroHomes=prompt('Indica el numero de hombres: ');
-        let numeroMujeres=prompt('Indica el numero de mujeres: ')
+        let numeroMujeres=prompt('Indica el numero de mujeres: ');
+        let totalPoblacion=prompt('Indica el numero total de personas: ');
+
+        var porcentajeHombres=(numeroHomes*100)/totalPoblacion;
+        var porcentajeMujeres=(numeroMujeres*100)/totalPoblacion;
+        document.writeln(`Porcentaje hombres: ${porcentajeHombres}`);
+        document.writeln(`<br>Porcentaje mujeres: ${porcentajeMujeres}`);
+
     </script>
    </body>
 </html>
