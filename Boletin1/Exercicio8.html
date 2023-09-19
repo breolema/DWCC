@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin 1</title>
+  <body>
+    <h1>Exercicio 8</h1>
+    <script>
+        let peso=prompt('Introduce o teu peso');
+        let altura=prompt('Introduce a tua altura en cm');
+        let edad=prompt('Introduce a tua edad');
+
+        var calorias = 10 * Number(peso) + 6.25 * Number(altura) - 5 * Number(edad);
+        var imc = peso / ((altura / 100) * (altura / 100));
+        
+        document.write(`<br><br>
+                <table border="1" id="tabla">
+                    <tr>
+                        <td>Altura (cm)</td>
+                        <td>Peso (kg)</td>
+                        <td>Edad</td>
+                        <td>IMC</td>
+                        <td>Calorias a consumir</td>
+                    </tr>
+                    <tr>
+                        <td>${usuarioAltura}</td>
+                        <td>${usuarioPeso}</td>
+                        <td>${usuarioEdad}</td>
+                        <td>${imc}</td>
+                        <td>${calorias}</td>
+                    </tr>
+                   
+                </table>
+                `);
+
+    </script>
+   </body>
+</html>
