@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin 1</title>
+  <body>
+    <h1>Exercicio 9</h1>
+    <script>
+        let numero = prompt('Indica un numero natural de 4 díxitos:')
+        numero = parseInt(numero);
+	    var miles = Math.trunc(numero/1000);			
+	    var unidades = numero % 1000;
+	    var centenas = Math.trunc(unidades/100);
+	    unidades = unidades % 100;
+	    var decenas = Math.trunc(unidades/10);
+	    unidades = unidades % 10;			
+				
+	    document.write('O número introducido ten ' + miles + ' millares, ' + centenas + ' centenas, ' + decenas + ' decenas e ' + unidades + ' unidades');
+    </script>
+   </body>
+</html>
