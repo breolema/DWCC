@@ -4,7 +4,40 @@
   <body>
     <h1>Exercicio 2</h1>
     <script>
-      let figura=prompt('Elige a que figura quieres calcularle el area: \n1. Triangulo.\n2.')
+      let figura=prompt('Elige a que figura quieres calcularle el area: \n1. Triangulo.\n2. Cuadrado.\n3. Rectángulo.\n4. Circulo.');
+      figura=Number(figura);
+      switch(figura){
+      case 1:
+        let base=prompt('Indica la longitud de la base del triangulo en cm');
+        let altura=prompt('Indica la altura del triangulo en cm2');
+        base=Number(base);
+        altura=Number(altura);
+        areaTri=base*altura/2;
+        document.write('El area del triangulo es: ' + areaTri + 'cm2');
+        break;
+      case 2:
+        let lado=prompt('Indica la longitud del lado del cuadrado en cm');
+        lado=Number(lado);
+        areaCuadr=lado*lado;
+        document.write('El area del cuadrado es: ' + areaCuadr + 'cm2');
+        break;
+      case 3:
+        let largo=prompt('Indica la longitud del largo del rectanglo en cm');
+        let ancho=prompt('Indica la anchura del rectanglo en cm');
+        largo=Number(largo);
+        ancho=Number(ancho);
+        areaRect=largo*ancho;
+        document.write('El area del rectangulo es: ' + areaRect + 'cm2');
+        break;
+      case 4:
+        let radio=prompt('Indica el radio del circulo en cm');
+        radio=Number(radio);
+        areaCirc=Math.PI*radio*radio;
+        document.write('El area del circulo es: ' + areaCirc + 'cm2');
+        break;
+      default:
+        document.write('No seleccionaste ninguna de las opciones permitidas.')
+      }
 
     </script>
    </body>

@@ -4,8 +4,42 @@
   <body>
     <h1>Exercicio </h1>
     <script>
-
-
+      let figura=prompt('Elige a que figura quieres calcularle el perimetro: \n1. Triangulo.\n2. Cuadrado.\n3. Rectángulo.\n4. Circulo.');
+      figura=Number(figura);
+      switch(figura){
+      case 1:
+        let base=prompt('Indica la longitud de la base del triangulo en cm');
+        let lado1=prompt('Indica un lado del triangulo en cm');
+        let lado2=prompt('Indica el otro lado del triangulo en cm');
+        base=Number(base);
+        lado1=Number(lado1);
+        lado2=Number(lado2);
+        perimetroTri=base+lado1+lado2;
+        document.write('El area del triangulo es: ' + perimetroTri + 'cm');
+        break;
+      case 2:
+        let lado=prompt('Indica la longitud del lado del cuadrado en cm');
+        lado=Number(lado);
+        perimetroCuadr=lado*4;
+        document.write('El perimetro del cuadrado es: ' + perimetroCuadr + 'cm');
+        break;
+      case 3:
+        let largo=prompt('Indica la longitud del largo del rectanglo en cm');
+        let ancho=prompt('Indica la anchura del rectanglo en cm');
+        largo=Number(largo);
+        ancho=Number(ancho);
+        areaRect=largo*2+ancho*2;
+        document.write('El perimetro del rectangulo es: ' + areaRect + 'cm');
+        break;
+      case 4:
+        let radio=prompt('Indica el radio del circulo en cm');
+        radio=Number(radio);
+        areaCirc=2*Math.PI*radio;
+        document.write('El perimetro del circulo es: ' + areaCirc + 'cm');
+        break;
+      default:
+        document.write('No seleccionaste ninguna de las opciones permitidas.')
+      }
     </script>
    </body>
 </html>

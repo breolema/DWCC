@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <title>Boletin </title>
+  <title>Boletin 2</title>
   <body>
-    <h1>Exercicio </h1>
+    <h1>Exercicio 6</h1>
     <script>
+      let numero1=prompt('Escribe un numero');
+      let numero2=prompt('Escribe otro numero');
 
-
+      if (numero1 == numero2) {
+        document.write("Los números son iguales.");
+      } else {
+        if (numero1 > numero2) {
+          document.write("El primer número: " + numero1 + " es mayor que el segundo " + numero2 + ".");
+        } else {
+          document.write("El segundo número: " + numero2 + " es mayor que el primero: " + numero1 + ".");
+        }
+      }
     </script>
    </body>
 </html>
