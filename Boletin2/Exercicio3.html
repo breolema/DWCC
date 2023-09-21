@@ -4,7 +4,86 @@
   <body>
     <h1>Exercicio 3</h1>
     <script>
+      let figura=prompt('Elige la que figura quieres calcularle el area: \n1. Triangulo.\n2. Cuadrado.\n3. Rectángulo.\n4. Circulo.');
+      figura=Number(figura);
       
+      let figura2=prompt('Elige la otra figura quieres calcularle el area: \n1. Triangulo.\n2. Cuadrado.\n3. Rectángulo.\n4. Circulo.');
+      figura2=Number(figura2);
+
+      switch(figura){
+      case 1:
+        let base=prompt('Indica la longitud de la base del triangulo en cm');
+        let altura=prompt('Indica la altura del triangulo en cm');
+        base=Number(base);
+        altura=Number(altura);
+        areaFigura1=base*altura/2;
+        document.write('El area del triangulo es: ' + areaFigura1 + 'cm2 <br>');
+        break;
+      case 2:
+        let lado=prompt('Indica la longitud del lado del cuadrado en cm');
+        lado=Number(lado);
+        areaFigura1=lado*lado;
+        document.write('El area del cuadrado es: ' + areaFigura1 + 'cm2 <br>');
+        break;
+      case 3:
+        let largo=prompt('Indica la longitud del largo del rectanglo en cm');
+        let ancho=prompt('Indica la anchura del rectanglo en cm');
+        largo=Number(largo);
+        ancho=Number(ancho);
+        areaFigura1=largo*ancho;
+        document.write('El area del rectangulo es: ' + areaFigura1 + 'cm2 <br>');
+        break;
+      case 4:
+        let radio=prompt('Indica el radio del circulo en cm');
+        radio=Number(radio);
+        areaFigura1=Math.PI*radio*radio;
+        document.write('El area del circulo es: ' + areaFigura1 + 'cm2 <br>');
+        break;
+      default:
+        document.write('No seleccionaste ninguna de las opciones permitidas.')
+      }
+
+      switch(figura2){
+      case 1:
+        let base=prompt('Indica la longitud de la base del triangulo en cm');
+        let altura=prompt('Indica la altura del triangulo en cm');
+        base=Number(base);
+        altura=Number(altura);
+        areaFigura2=base*altura/2;
+        document.write('El area del triangulo es: ' + areaFigura2 + 'cm2<br>');
+        break;
+      case 2:
+        let lado=prompt('Indica la longitud del lado del cuadrado en cm');
+        lado=Number(lado);
+        areaFigura2=lado*lado;
+        document.write('El area del cuadrado es: ' + areaFigura2 + 'cm2<br>');
+        break;
+      case 3:
+        let largo=prompt('Indica la longitud del largo del rectanglo en cm');
+        let ancho=prompt('Indica la anchura del rectanglo en cm');
+        largo=Number(largo);
+        ancho=Number(ancho);
+        areaFigura2=largo*ancho;
+        document.write('El area del rectangulo es: ' + areaFigura2 + 'cm2<br>');
+        break;
+      case 4:
+        let radio=prompt('Indica el radio del circulo en cm');
+        radio=Number(radio);
+        areaFigura2=Math.PI*radio*radio;
+        document.write('El area del circulo es: ' + areaFigura2 + 'cm2<br>');
+        break;
+      default:
+        document.write('No seleccionaste ninguna de las opciones permitidas.')
+      }
+
+      if(areaFigura1 > areaFigura2){
+                document.write("El area de la 1º figura es mas grande");
+            } else if (areaFigura1 < areaFigura2){
+                document.write("El area de la 2º figura es mas grande");
+            } else{
+                document.write("Las areas de las dos figuras son iguales");
+            }
+
     </script>
    </body>
 </html>

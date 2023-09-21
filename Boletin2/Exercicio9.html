@@ -4,7 +4,15 @@
   <body>
     <h1>Exercicio </h1>
     <script>
+      let ano = prompt('Escribe un año para saber que competicion se disputa:');
 
+      if(ano%4==0 && ano%2==0){
+        document.write(`El ${ano} se celebran los juegos olimpicos y el campeonato de europa`);
+      }  else if(ano % 2 == 0){
+        document.write(`El ${ano} se juega el campeonato de europa`);
+      } else{
+        document.write(`El ${ano} se juegan los Mundiales`);
+      }
 
     </script>
    </body>
