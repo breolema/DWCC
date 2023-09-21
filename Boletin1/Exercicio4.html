@@ -7,7 +7,11 @@
         let numeroHomes=prompt('Indica el numero de hombres: ');
         let numeroMujeres=prompt('Indica el numero de mujeres: ');
         let totalPoblacion=prompt('Indica el numero total de personas: ');
-
+        
+        numeroHomes=Number(numeroHomes);
+        numeroMujeres=Number(numeroMujeres);
+        totalPoblacion=Number(totalPoblacion);
+        
         var porcentajeHombres=(numeroHomes*100)/totalPoblacion;
         var porcentajeMujeres=(numeroMujeres*100)/totalPoblacion;
         document.writeln(`Porcentaje hombres: ${porcentajeHombres}`);
