@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin 3</title>
+  <body>
+    <h1>Exercicio 4</h1>
+    <script>
+	let numero = '';
+	for (let i=2; i<=100; i++) {
+		primo = true;
+		for (let j=2; j<i/2; j++) {
+			if (i%j==0) {
+				primo = false; break;
+			}	
+		}	
+		if (primo) {
+			numero += i + ' ';	
+		}	
+	}
+	document.write(numero);
+    </script>
+   </body>
+</html>

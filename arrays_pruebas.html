@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <title>Arrays Ejemplos</title>
+  <body>
+    <h1>Pruebas arrays</h1>
+    <script>
+	/** Definir array multidimensional que recolla nombre de fruta e o precio, 
+     * teñen que ser 3 na sua definicion debe pedir unha nova fruta en tempo
+     * de execucióndo programa. Finalmente, imprimir todas as frutas.
+     */
+   /**
+   var frutas = [
+      ["Papaya", 3.2],
+      ["Fruta del dragón",4],
+      ["Platano", 2.15],
+   ];
+      let nueva_fruta = prompt("Introduce el nombre de una fruta nueva: ");
+      let nuevo_precio = parseFloat(
+         prompt(`Introduce el precio de ${nueva_fruta}`)
+      );
+
+      frutas[3] = [nueva_fruta, nuevo_precio];
+
+      for (let i = 0; i < frutas.length; i++) {
+         document.write("Nombre Fruta: " + frutas[i][0] + " - Precio: " + frutas[i][1] + "<br>");
+      }
+     **/
+
+     //RECORRER ARRAYS
+     /**
+      let prezos = [69.99,12.49,35.20,99.90];
+         for (let i=0;i<prezos.length;i++){
+         document.write(`El precio ${i} es ${prezos[i]} <br>`);
+      }
+
+      for (let i in prezos){
+         document.write(`<br>El precio ${i} es ${prezos[i]}`);
+      }
+      **/
+
+      var empleados = [
+         ["Pablo", "Manolo"],
+         ["Samuel","Aaron"],
+         ["Angel", "Carlos"],
+      ];
+
+      for (let i=0;i<empleados.length;i++){
+         for(j=0;j<empleados[i].length;j++){
+            document.write(`Fila ${i} - Columna ${j}: ${empleados[i][j]} <br>`);
+      }
+}
+
+    </script>
+   </body>
+</html>
