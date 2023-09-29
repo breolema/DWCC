@@ -39,6 +39,7 @@
       }
       **/
 
+      /**
       var empleados = [
          ["Pablo", "Manolo"],
          ["Samuel","Aaron"],
@@ -49,7 +50,30 @@
          for(j=0;j<empleados[i].length;j++){
             document.write(`Fila ${i} - Columna ${j}: ${empleados[i][j]} <br>`);
       }
-}
+}     **/
+   /**
+      array1=[1,2,3,4];
+      array2=array1;
+      array2[0]=4;
+      document.write(array1 + `<br>`);
+      document.write(array2);
+   **/
+
+    /**Dado un array que se cargará con 5 elementos que se intriducen por pantalla
+     * indicar cantas veces aparece un elemento que tamén se pide por pantalla
+     **/
+   array=[1,1,4,3];
+   array1=Number(array);
+
+   let contador=0;
+   let elemento = array1.indexOf(1);
+
+      while(elemento!=-1){
+         contador++;
+         elemento =  array1.indexOf(elemento+1);
+      }
+      document.write(elemento);
+   
 
     </script>
    </body>
