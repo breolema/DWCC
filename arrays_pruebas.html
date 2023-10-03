@@ -6,10 +6,9 @@
     <h1>Pruebas arrays</h1>
     <script>
 	/** Definir array multidimensional que recolla nombre de fruta e o precio, 
-     * teñen que ser 3 na sua definicion debe pedir unha nova fruta en tempo
-     * de execucióndo programa. Finalmente, imprimir todas as frutas.
-     */
-   /**
+       teñen que ser 3 na sua definicion debe pedir unha nova fruta en tempo
+       de execucióndo programa. Finalmente, imprimir todas as frutas.
+   
    var frutas = [
       ["Papaya", 3.2],
       ["Fruta del dragón",4],
@@ -27,8 +26,9 @@
       }
      **/
 
-     //RECORRER ARRAYS
-     /**
+
+     /**RECORRER ARRAYS
+     
       let prezos = [69.99,12.49,35.20,99.90];
          for (let i=0;i<prezos.length;i++){
          document.write(`El precio ${i} es ${prezos[i]} <br>`);
@@ -38,6 +38,7 @@
          document.write(`<br>El precio ${i} es ${prezos[i]}`);
       }
       **/
+
 
       /**
       var empleados = [
@@ -51,6 +52,8 @@
             document.write(`Fila ${i} - Columna ${j}: ${empleados[i][j]} <br>`);
       }
 }     **/
+
+
    /**
       array1=[1,2,3,4];
       array2=array1;
@@ -62,6 +65,9 @@
     /**Dado un array que se cargará con 5 elementos que se intriducen por pantalla
      * indicar cantas veces aparece un elemento que tamén se pide por pantalla
      **/
+   
+
+   /**
    array=[1,1,4,3];
    array1=Number(array);
 
@@ -73,7 +79,62 @@
          elemento =  array1.indexOf(elemento+1);
       }
       document.write(elemento);
+
+   **/
+
+
+   /**
+   var conjunto=new Set(["primeiro","segundo","terceiro","primeiro"]);
+   for (let elemento of conjunto){
+      console.log(elemento);
+   }
+   */
+
+
+   /** Pide 10 nombres de personas e imprimelos
+
+   for(let i=0;i<=10;i++){
+      let nombres= prompt("Introduce 10 nombres");
+      console.log(nombres);
+   }
+   */
+
+   /** Crear un programa con el siguiente menú:
+    ----------Cidades de España----------
+    1. Introducir unha nova cidade.
+    2. Ver cidades cargadas no conxunto.
+    3. Comprobar si algunha cidade está cargada no conxunto.
+    4. Eliminar unha cidade do conxunto.
+    5. Saír do programa.
+    */
+   let salida = false;
    
+   while(salida!=true){
+      let menu=prompt("----------Cidades de España---------- \n1. Introducir unha nova cidade.\n2. Ver cidades cargadas no conxunto.\n3. Comprobar si algunha cidade está cargada no conxunto.\n4. Eliminar unha cidade do conxunto.\n5. Saír do programa.");
+      menu=Number(menu);
+
+      switch(menu){
+      case 1:
+        let nuevaCiudad=prompt("Introduce el nombre de la ciudad.");
+        ciudades.add(nuevaCiudad);
+        console.log(nuevaCiudad)
+        break;
+      case 2:
+        
+        break;
+      case 3:
+        
+        break;
+      case 4:
+        
+        break;
+      case 5:
+        salida=true;
+        break;
+   }
+   }
+
+
 
     </script>
    </body>
