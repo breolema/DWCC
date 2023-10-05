@@ -4,7 +4,11 @@
   <body>
     <h1>Exercicio 4</h1>
     <script>
-	
+        var arrayAscendente = [15,87,97,1,2];
+        arrayAscendente.sort(function(a, b) {
+          return b-a;
+        });
+        document.write(`${arrayAscendente}<br>`);
     </script>
    </body>
 </html>

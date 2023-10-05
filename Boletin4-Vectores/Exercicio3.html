@@ -4,7 +4,28 @@
   <body>
     <h1>Exercicio 3</h1>
     <script>
+          let array=[1,-1,5,-5,6,-6,8,-7,0,-2];
+
+          let numerosPos=[];
+          let numerosNeg=[];
+          let ceros=[];
+
+          for(let i=0;i<=array.length;i++){
+            if(array[i] > 0){
+              numerosPos++;
+            } else if(array[i]<0){
+              numerosNeg++;
+            } else{
+              ceros++;
+            }
+          }
+
+          document.write(`Hay ${numerosPos} numeros positivos <br>`);
+          document.write(`Hay ${numerosNeg} numeros negativos <br>`);
+          document.write(`Hay ${ceros} ceros`);
           
+          
+
     </script>
    </body>
 </html>
