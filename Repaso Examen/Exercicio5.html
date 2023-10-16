@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin </title>
+  <body>
+    <h1>Exercicio </h1>
+    <script>
+        /*Comprobar se unha cadena é un palíndromo. Que se le iguala
+        de esquerda a dereita que de dereita a esquerda*/
+
+        let texto=prompt("Introduce una cadena para comprobar si es un palindromo.");
+        let palindromo="";
+
+        for(let i = texto.length-1;i>=0;i--){
+            palindromo=palindromo+texto[i];
+        }
+        if(palindromo==texto){
+            document.write("Es un palindromo!");
+        } else {
+            document.write("No es un palindromo!");
+        }
+    </script>
+   </body>
+</html>

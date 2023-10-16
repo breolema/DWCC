@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+        /*
+        Facer un programa que implemente un xogo para encontrar un número aleatorio baixo as seguintes premisas:
+        1. O número é do 1 ao 100.
+        2. Preguntaremos ao usuario sempre o número co que xoga
+        3. Se o número do usuario é correcto indica que se acertou e se non volta pedir o número. 
+        4. Debe dar pistas. Se o número e maior ou menor que o que o usuario introduxo.
+        5. O usuario pode cancelar o xogo. 
+        6. Ao final deberemos medir a tasa acertos: Intentos do usuario.
+        */
+       
+        let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        let intentos = 0;
+
+        while (true) {
+            let numero = prompt("Intenta adivinar el número entre 1 y 100:");
+            if (numero == "exit") {
+                alert("Has cancelado el juego.");
+                break;
+            }
+            numero = parseInt(numero);
+            intentos++;
+            if (numero < 1 || numero > 100) {
+                alert("Por favor, ingresa un número entre 1 y 100.");
+            }
+
+            if (numero === numeroSecreto) {
+                alert("¡Felicidades! Has adivinado el número correctamente.");
+                alert("Número de intentos: " + intentos);
+                break;
+            } else if (numero > numeroSecreto) {
+                alert("El número es menor.");
+            } else {
+                alert("El número es mayor.");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <title>Repaso examen</title>
+  <body>
+    <h1>Exercicio 7</h1>
+    <script>
+            /*Xerar con math.random mil numeros. Omprobar con que frecuencia apareceu os números do 1 o 10.
+            Debe imprimir:
+            1 apareceu x veces
+            2 apareceu x veces...*/
+
+            let array=[];
+
+            for(let i=0;i<=1000;i++){
+                let numeroRandom = Math.floor(Math.random() * 10) + 1;
+                if(array[numeroRandom]){
+                    array[numeroRandom]=array[numeroRandom]+1
+                } else {
+                    array[numeroRandom]=1;
+                }
+            }
+
+            for (let i = 1; i <= 10; i++) {
+                let veces = array[i] ? array[i] : 0;
+                document.write(i + " apareceu " + veces + " veces" + `<br>`);
+            }
+    </script>
+   </body>
+</html>

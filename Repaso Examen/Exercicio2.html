@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <title>Exercicios Repaso</title>
+  <body>
+    <h1>Exercicio </h1>
+    <script>
+        //Solicita una cadena e convertila noutra que teña todas as vocales x
+
+        let texto=prompt("Escribe una cadena para cambiar las vocales por x");
+        let buscarVocales=/[aeiouAEIOU]/g;
+        let cambiarLetra="x";
+        let cadenaFinal=texto.replace(buscarVocales,cambiarLetra);
+        document.write(cadenaFinal);
+    </script>
+   </body>
+</html>

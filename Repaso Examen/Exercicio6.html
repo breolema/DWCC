@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin </title>
+  <body>
+    <h1>Exercicio </h1>
+    <script>
+        /* Crea unha lista utilizando un array.
+        Debe:
+        Insertar ao final do vector.
+        Insertar ao inicio do vector.
+        Insertar na posición x do vector.
+        Debe permitir as accións anteriores mediante borrado*/
+        
+        var array=[];
+
+        do {
+            var opcion=parseInt(prompt("1. Insertar ao final do vector.\n2.  Insertar ao inicio do vector.\n3. Insertar na posición x do vector.\n4. Borrar.\n7. Enseñar el array completo.\n6. Salir."));
+            
+            switch(opcion){
+                case 1: 
+                    let numero=parseInt(prompt("Escribe el numero que quieres añadir al array."));
+                    array.push(numero);
+                    document.write(numero);
+                    break;
+                case 2:
+                    let numero2=parseInt(prompt("Escribe el numero que quieres añadir al principio del array."));
+                    array.unshift(numero2);
+                    document.write(array);
+                    break;
+                case 3:
+                    let numero3=parseInt(prompt("Escribe el numero que quieres añadir al array."));
+                    let posicion=prompt("Escribe la posición donde deseas añadirlo");
+                    array.splice(posicion, 0, numero3);
+                    document.write(array);
+                    break;
+                case 4:
+                    var posicionBorrar = parseInt(prompt("Ingrese la posición del elemento a borrar"));
+                    if (posicionBorrar >= 0 && posicionBorrar < array.length) {
+                        array.splice(posicionBorrar, 1);
+                    } else {
+                        document.write("Posición inválida. No se ha realizado ninguna eliminación.");
+                    }
+                    document.write(array);
+                    break;
+                case 5:
+                    document.write(`El array es ${array}`);
+                    break;
+                case 6:
+                    alert("Saliendo del programa.");
+                    break;
+                default:
+                    console.log("Opción no válida. Intente nuevamente.");
+                    break;
+            } 
+            
+        }while (opcion!=0);
+        
+    </script>
+   </body>
+</html>
+
+
+
+
+
+
+               
