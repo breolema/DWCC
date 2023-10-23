@@ -6,7 +6,7 @@
     <h1>Exercicio 1</h1>
     <script>
         let cadena = prompt("Escrribe una cadena para contar sus vocales.");
-        let vocales = ['a', 'e', 'i', 'o', 'u'];
+        let vocales = ['a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U'];
         cadena = cadena.toLowerCase();
 
         let resultado = {
@@ -18,9 +18,9 @@
         };
 
         for (let i = 0; i < cadena.length; i++) {
-            let caracter = cadena[i];
-            if (resultado[caracter] !== undefined) {
-                resultado[caracter] += 1;
+            let letra = cadena[i];
+            if (resultado[letra] !== undefined) {
+                resultado[letra] += 1;
             }
         }
 

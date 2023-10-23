@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <title>Repaso examen</title>
+  <body>
+    <h1>Exercicio 10</h1>
+    <script>
+        /*Crea un programa que comprobe se unha contrasinal é complexa.
+        1. Debe ter unha lonxitude de máis de 8 caracteres.
+        2. Debe ter unha letra maiúscula, polo menos.
+        3. Debe ter un dos seguintes caracteres "-;,_:"*/
+
+        let contrasinal=prompt("Escribe unha contraseña que teña: \n 1. Debe ter unha lonxitude de máis de 8 caracteres.\n 2. Debe ter unha letra maiúscula, polo menos.\n3. Debe ter un dos seguintes caracteres '-;,_:'");
+        let todoCorrecto=true;
+
+        
+        if(contrasinal.length<8){
+            document.write("O contrasinal ten menos de 8 caracteres.");
+            todoCorrecto=false;
+        } 
+        
+        contrasinalMinusc= contrasinal.toLowerCase();
+        if (contrasinal==contrasinalMinusc){
+            document.write("A cadena non conten mayusculas");
+            todoCorrecto=false;
+        }
+
+        if(contrasinal.includes("-") || contrasinal.includes(";") || contrasinal.includes(",") || contrasinal.includes("_") || contrasinal.includes(":")){
+        } else{
+            document.write("O contrasinla debe ter algun de estos caracteres : '-;,_:'");
+            todoCorrecto=false;
+        }
+
+        if(todoCorrecto==true){
+            document.write("O contrasinal é forte!")
+        }
+
+        
+    </script>
+   </body>
+</html>
