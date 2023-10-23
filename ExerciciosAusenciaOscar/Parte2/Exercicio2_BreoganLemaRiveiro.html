@@ -5,16 +5,27 @@
 <body>
     <h1>Exercicio 2</h1>
     <script>
+        //pedimos a frase por pantalla
         let frase =prompt("Escribe una frase.");
+
+        //separamos toda a cadena co .split, que es el separador
         let palabras = frase.split(" ");
 
+        //creamos un for parra recorrer o array
         for (let i = 0; i < palabras.length; i++) {
-            let palabra = palabras[i];
-            palabras[i] = palabra[0].toUpperCase() + palabra.slice(1);
+            //creamos una variable nueva que tendrá los datos del array, es decir cada plabra
+            // a medida que se recorre el for
+            let p = palabras[i];
+            //con el toUpperCase hacemos que se pase a mayusculas y con el .slice recorremos el resto 
+            // de la palabra dejandola en minusculas.
+            palabras[i] = p[0].toUpperCase() + p.slice(1) ;
         }
 
-        let fraseCapitalizada = palabras.join(" ");
-        document.write(fraseCapitalizada);
+        //ahora unimos la cadena con espacios de por medio con el .join
+        let fraseMayusc = palabras.join(" ");
+        
+        //sacamos por pantalla la cadena final
+        document.write(fraseMayusc);
     </script>
 </body>
 
