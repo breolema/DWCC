@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Galiza Skills</title>
+
+<body>
+    <h1>Ejercicio 3</h1>
+    <script>
+        const a = [1, 2, 5];
+        const b = [3, 4, 6];
+        const resultado = [];
+
+        let i = 0;
+        let j = 0;
+
+        while (i < a.length && j < b.length) {
+            if (a[i] < b[j]) {
+                resultado.push(a[i]);
+                i++;
+            } else {
+                resultado.push(b[j]);
+                j++;
+            }
+        }
+
+        while (i < a.length) {
+            resultado.push(a[i]);
+            i++;
+        }
+
+        while (j < b.length) {
+            resultado.push(b[j]);
+            j++;
+        }
+
+        document.write(`Resultado: [${resultado.join(", ")}]`);
+
+
+    </script>
+</body>
+
+</html>

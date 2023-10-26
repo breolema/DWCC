@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Galiza Skills</title>
+
+<body>
+    <h1>Ejercicio 2</h1>
+
+    <script>
+        const matriz = [];
+        const cantidadNumeros = 100;
+
+        for (let i = 0; i < cantidadNumeros; i++) {
+            const numeroAleatorio = Math.floor(Math.random() * 10) + 1; 
+            matriz.push(numeroAleatorio);
+        }
+
+        const suma = matriz.reduce((total, numero) => total + numero, 0);
+
+        if (suma > 500) {
+            document.write(`La suma de los ${cantidadNumeros} números aleatorios es ${suma}, que es mayor que 500.`);
+        } else {
+            document.write(`La suma de los ${cantidadNumeros} números aleatorios es ${suma}, que no supera los 500.`);
+        }
+
+    </script>
+</body>
+
+</html>
