@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Vectores</title>
+
+<body>
+    <h4>Ejercicio 6</h4>
+
+    <script>
+        const matriz = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12]
+        ];
+
+        const matrizTrasposta = [];
+
+        for (let i = 0; i < matriz[0].length; i++) {
+            matrizTrasposta.push([]);
+        }
+
+        for (let i = 0; i < matriz.length; i++) {
+            for (let j = 0; j < matriz[i].length; j++) {
+                matrizTrasposta[j].push(matriz[i][j]);
+            }
+        }
+
+        document.write("Matriz original:");
+        for (let i = 0; i < matriz.length; i++) {
+            document.write(matriz[i].join(" "));
+        }
+
+        document.write("\nMatriz trasposta:");
+        for (let i = 0; i < matrizTrasposta.length; i++) {
+            document.write(matrizTrasposta[i].join(" "));
+        }
+    </script>
+</body>
+
+</html>

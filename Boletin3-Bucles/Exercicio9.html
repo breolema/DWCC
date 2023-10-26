@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>Condicionais</title>
+
+<body>
+    <h4>Ejercicio 9</h4>
+    <script>
+        let num = prompt("Introduce el numero que deseas");
+
+        document.write(
+            `Combinaciones de dos números que suman ${num}:<br>`
+        );
+
+        for (let i = 0; i <= num / 2; i++) {
+            let j = num - i;
+            document.write(`${i} + ${j} = ${num}<br>`);
+        }
+    </script>
+</body>
+
+</html>
