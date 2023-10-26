@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <title>Boletin </title>
-  <body>
-    <h1>Exercicio </h1>
-    <script>
-            
-    </script>
-   </body>
+<title>Boletin 66</title>
+
+<body>
+  <h1>Exercicio 3</h1>
+  <script>
+    const notaTeorica = parseFloat(prompt("Introduce la nota del examen teórico:"));
+    const notaPractica = parseFloat(prompt("Introduce la nota del examen práctico:"));
+
+    const notaMedia = (notaTeorica + notaPractica) / 2;
+
+    if (notaTeorica >= 4 && notaPractica >= 4 && notaMedia >= 5) {
+      document.write("Aprobado.");
+    } else {
+      document.write("Suspenso.");
+    }
+  </script>
+</body>
+
 </html>
