@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin </title>
+  <body>
+    <h1>Exercicio </h1>
+    <script>
+        //Funcion que reciba un precio por parametro un portentaje desc e devolva o novo precio
+
+        let precio=Number(prompt("Cual es el precio del producto?"));
+        let desconto=Number(prompt("Cal é o desconto que ten?"));
+
+        function calcularDesc(precio,desconto){
+          desconto=desconto/100;
+          precio=precio-(precio*desconto);
+          return precio;
+        }
+
+        console.log(calcularDesc(precio,desconto));
+    </script>
+   </body>
+</html>
