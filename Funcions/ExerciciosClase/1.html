@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Clase</title>
+
+<body>
+    <h1>Funcions</h1>
+    <script>
+        /*Crear unha funcion que comprobe se un número é primo.
+        O número pásase por parametro.
+        Debe evaluarse se é primo ou non, dependendo do que devolva(true ou false) a funcion
+        no programa principal
+        Si é false o resulotado imprimese non é primo
+        Si é true o resulotado imprimese é primo*/
+
+        let numeros = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function primo(numero) {
+            if (numero < 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function comprobarPrimo(array) {
+            for (let i = 0; i < array.length; i++) {
+                if (primo(array[i])) {
+                    console.log(array[i] + " é primo.");
+                } else {
+                    console.log(array[i] + " non é primo.");
+                }
+            }
+        }
+
+        comprobarPrimo(numeros);
+
+    </script>
+</body>
+
+</html>

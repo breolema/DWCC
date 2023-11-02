@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <title>Exercicios Clase</title>
+  <body>
+    <h1>Exercicio 3</h1>
+    <script>
+        //facer unha funcion que reciba ºF e retorne ºC 
+
+        let gradosUsuario = prompt("Indica el numero de ºF para pasarlos a celsius");
+
+        gradosUsuario=Number(gradosUsuario);
+
+        function pasarGrados(gradosUsuario){
+            gradosC=(gradosUsuario-32)*0.5556;
+            return gradosC;
+        }
+        console.log(pasarGrados(gradosUsuario));
+    </script>
+   </body>
+</html>

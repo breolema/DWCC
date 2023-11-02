@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Clase</title>
+
+<body>
+    <h1>Exercicio 4</h1>
+    <script>
+        /* Crear unha funcion que reciba un array de 5 elementos, cargados do exterior
+        con numeros.
+        No interior da funcion busque cal é o menor gravando a posicion do menor coa
+        letra m.
+        Imprimimos o array
+        */
+
+        let numeros = [9,5,8,6,7];
+
+        function menor(array) {
+            var menor = array[0];
+            var posicion = 0;
+            for (let i = 0; i <= array.length; i++) {
+                if (array[i] < menor) {
+                    menor = array[i];
+                    posicion = i;
+                }
+            }
+            array[posicion] = "m";
+            return menor;
+        }
+        console.log(menor(numeros));
+        console.log(numeros);
+    </script>
+</body>
+
+</html>

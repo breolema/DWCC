@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Clase</title>
+
+<body>
+    <h1>Funcions</h1>
+    <script>
+       /*Crear una funcion que indique si un ciudadano puede votar
+       pedir edad*/
+       let usuario=prompt("Indique su edad");
+        usuario=Number(usuario);
+
+        function poderVotar(usuario){
+            if(usuario>=18){
+                console.log("Pode votar");
+            } else {
+                console.log("Non pode votar");
+            }
+        }        
+
+        poderVotar(usuario);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Probas</title>
+
+<body>
+    <h1>Funcions</h1>
+    <script>
+        /* Anatomía dunha función
+        function calcularCuadrado(numero){
+            let resultado=0;
+            resultado=numero**2;
+            return resultado;
+        }
+        console.log(calcularCuadrado(4));
+        */
+
+
+        /*Función con parámetros
+        function raizCuadrada(numero) {
+            return (Math.sqrt(numero));
+        }
+        console.log(raizCuadrada(4));
+        */
+
+        /* Funcións que chaman a outras
+        function raizCuadrada(numero){
+            return (Math.sqrt(numero));
+        }
+        function calcularMayor(vector){
+            let mayor= raizCuadrada(vector[0]);
+            for (let i=0;i<vector.length;i++){
+                if(raizCuadrada(vector[i])>mayor){
+                    mayor=raizCuadrada(vector[i]);
+                }
+            }
+            return mayor;
+        }
+        console.log(calcularMayor([64,128,4,1024,16]));
+        */
+
+        /* Exemplo de ámbito
+        var mensaje = "Fuera de la funcion";
+        function mostrarAnuncio(){
+            var mensaje="Dentro de la funcion";
+            console.log(mensaje);
+        }
+        mostrarAnuncio();
+        console.log(mensaje);
+        
+        //El mensaje esta fuera de la funcion
+        var mensaje = "Fuera de la funcion";
+        function mostrarAnuncio(){
+            console.log(mensaje);
+        }
+        mostrarAnuncio();
+        console.log(mensaje);
+        */
+
+        /*Paso por valor
+        var numero1=7;
+        var numero2=8;
+
+        function menor(primeiro,segundo){
+            var elmenor=primeiro;
+            if(segundo<primeiro){
+                    elmenor=segundo;
+            }
+                    return elmenor;            
+        }
+        console.log(menor(numero1,numero2));
+        */
+
+        /*Paso por referencia
+        var vector=[6,2,9,5,3];
+        function menor(elarray){
+            var elmenor=elarray[0];
+            var posicion=0;
+            for (let i=0;i<elarray.length;i++){
+                if(elarray[i]<elmenor){
+                    elmenor=elarray[i];
+                    posicion=i;
+                }
+            }
+            elarray[posicion]=-1;
+            return elmenor;
+        }
+        console.log(menor(vector));
+        console.log(vector);
+        */
+
+
+        /*Parámetros por defecto
+        function dividir(numerador,denominador=1){
+            return (numerador/denominador);
+        }
+        console.log(dividir(4)); //muestra 4
+        console.log(dividir(4,2)); //muestra 2
+        console.log(dividir()); //muestra NaN
+        */
+
+        const bienvenido=function sesionIniciada(){
+            console.log("Bienvenido de nuevo");
+        }
+        bienvenido();
+        sesionIniciada();
+
+    </script>
+</body>
+
+</html>
