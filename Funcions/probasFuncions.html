@@ -98,11 +98,33 @@
         console.log(dividir()); //muestra NaN
         */
 
+        /*Exemplo de función anónima
         const bienvenido=function sesionIniciada(){
             console.log("Bienvenido de nuevo");
         }
         bienvenido();
         sesionIniciada();
+        */
+
+        /* Exemplo de función callback
+        const bienvenido = function(){
+            return "Bienvenido de nuevo, ";
+        }
+
+        const usuario=function(callback){
+            console.log(callback()+"Breo");
+        }
+        usuario(bienvenido); //debe mostrar "Bienvenido de nuevo, Breo"
+        */
+        
+        const usuario = function (callback) {
+            console.log(callback() + "Javier");
+        }
+        usuario(
+            function () {
+                return "Bienvenido de nuevo, ";
+            }
+        )
 
     </script>
 </body>

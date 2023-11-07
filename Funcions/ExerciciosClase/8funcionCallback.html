@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <title>Funcions</title>
+  <body>
+    <h1>Callback</h1>
+    <script>
+        /*Escribe unha funcion chamada addArray que tome unha matriz de números
+        como primeiro argumento e unha funcion de devolucion de chamada como 
+        segundo argumento. A funcion de devolucion de chamada empregase para
+        realizar unha operación en cada elemento e devolver a suma total.
+        Por exemplo: function sumarArray(arr,callback)*/
+
+        const array=[1, 2, 3, 4, 5];
+
+        function sumarArray(array){
+          let suma=0;
+          for(let i=0;i<array.length;i++){
+            suma +=array[i];
+          }
+          return suma;
+        }
+
+
+      function addArray(array, callback){
+          return callback(array)
+      }
+
+        console.log(addArray(array,sumarArray))
+    </script>
+   </body>
+</html>
