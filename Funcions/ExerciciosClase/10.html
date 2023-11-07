@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin </title>
+
+<body>
+    <h1>Exercicio </h1>
+    <script>
+        /*Comprobar que un string de 5 letras(solo 5) e un palindromo usando callback*/
+
+        const palabra = "ololo";
+        function comprobarLetras(palabra) {
+            if (palabra.length != 5) {
+                console.log("A palabra ten menos de 5 letras");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function palindromo(palabra, callback) {
+            if (callback(palabra) == true) {
+                if (palabra.charAt(0) == palabra.charAt(4) && palabra.charAt(1) == palabra.charAt(3)) {
+                    console.log("É un palindormo");
+                } else {
+                    console.log("Non é un palindormo");
+                }
+            }
+        }
+
+        palindromo(palabra,comprobarLetras);
+
+    </script>
+</body>
+
+</html>
