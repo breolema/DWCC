@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <title>Boletin </title>
+  <body>
+    <h1>Exercicio </h1>
+    <script>
+        /*crear una funcion donde haga el factorial de un numero y usando callback
+        devuelva el doble del factorial*/
+            const numero=5;
+
+            function factorial(numero){
+                let hacerFact=1;
+                for(let i=1;i<=numero;i++){
+                    hacerFact= hacerFact*i;
+                }
+                return hacerFact;
+            }
+
+            function dobleFact(numero,callback){
+                let doble=callback(numero)*2; //importante la funcion callback debe tener los () y la variable que quieres pasar dentro
+                return doble;
+            }
+
+            console.log(dobleFact(numero,factorial))
+
+    </script>
+   </body>
+</html>
