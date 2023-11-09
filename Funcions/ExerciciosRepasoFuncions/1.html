@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <title>EXERCICIOS DE REPASO DE FUNCIÓNS</title>
+  <body>
+    <h1>Exercicio 1</h1>
+    <script>
+        /*Crear unha función que determine se un ano pasado por parámetro é bisesto.*/
+
+        let anoUsuario=Number(prompt("Indica un año para "));
+
+        function esBisiesto(anoUsuario){
+            if(anoUsuario%4==0 && anoUsuario%100!=0){
+                console.log("El año es bisiesto");
+            } else {
+                console.log("El año no es bisiesto");
+            }
+        }
+
+        esBisiesto(anoUsuario);
+    </script>
+   </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>EXERCICIOS DE REPASO DE FUNCIÓNS</title>
+  <body>
+    <h1>Exercicio 2</h1>
+    <script>
+        /*Crear unha función que devolva a táboa de multiplicar do número que recibe por parámetro.*/
+
+        let numero = Number(prompt("Indica un numero para facer a sua tabla de multiplicar"));
+
+        function tablaMultiplicar(numero){
+            let multiplicacion=1;
+            for(let i=1;i<=10;i++){
+                multiplicacion=numero*i
+                console.log(numero + "x" + i + "=" + multiplicacion);
+            }
+        }
+
+        tablaMultiplicar(numero);
+
+    </script>
+   </body>
+</html>

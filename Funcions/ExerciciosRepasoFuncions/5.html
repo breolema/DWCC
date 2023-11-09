@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS DE REPASO DE FUNCIÓNS</title>
+
+<body>
+    <h1>Exercicio 5</h1>
+    <script>
+
+        let palabra1 = prompt("Escribe una palabra");
+        let palabra2 = prompt("Escribe otra palabra");
+
+        function mismasLetras(palabra1, palabra2) {
+            for (var i = 0; i < palabra2.length; i++) {
+                if (palabra1.includes(palabra2[i])) {
+                    var contador = 1;
+                }
+            }
+            if (contador == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function resultado(palabra1, palabra2, callback) {
+            if (callback(palabra1,palabra2==true)) {
+                console.log("Son iguales");
+            } else {
+                console.log("Non son iguales");
+            }
+        }
+
+        resultado(palabra1,palabra2,mismasLetras);
+    </script>
+</body>
+
+</html>

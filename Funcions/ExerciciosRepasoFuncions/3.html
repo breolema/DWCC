@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS DE REPASO DE FUNCIÓNS</title>
+
+<body>
+    <h1>Exercicio 3</h1>
+    <script>
+        /*Crear unha función que devolva a letra do DNI do número que recibe por parámetro.*/
+
+        let numerosDNI = prompt("Indica los numeros de tu DNI");
+
+        let tablaLetras = new Map([
+            [0, "T"],
+            [1, "R"],
+            [2, "W"],
+            [3, "A"],
+            [4, "G"],
+            [5, "M"],
+            [6, "Y"],
+            [7, "F"],
+            [8, "P"],
+            [9, "D"],
+            [10, "X"],
+            [11, "B"],
+            [12, "N"],
+            [13, "J"],
+            [14, "Z"],
+            [15, "S"],
+            [16, "Q"],
+            [17, "V"],
+            [18, "H"],
+            [19, "L"],
+            [20, "C"],
+            [21, "K"],
+            [22, "E"],
+        ]);
+
+        function letraDNI(numerosDNI) {
+            var letra = numerosDNI % 23;
+            console.log("A letra é " + tablaLetras.get(letra))
+        }
+
+        letraDNI(numerosDNI);
+    </script>
+</body>
+
+</html>
