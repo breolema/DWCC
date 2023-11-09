@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <title>Repaso Funcions Callback</title>
+  <body>
+    <h1>Exercicio 3</h1>
+    <script>
+        /*Facer un programa que conteña unha funcion que contemple como válido 
+        ou non válido un salario que pasamos por parametro e no caso de que sexa
+        válido farase unha tabla de incrementos para os vindeiros 5 anos do 1,05.
+        O salario non vai ser superior a 1600 ao mes.*/
+
+        let salario=Number(prompt("Cual es tu salario?"));
+        
+
+        function esValido(salario){
+            if (salario<1600){
+                return salario;
+            } else {
+                document.write("El salario debe ser menor a 1600€.")
+            }
+        }
+        
+        function tablaIncrementos(salario,callback){
+            document.write("<table border=1><tr><th>Año</th><th>Salario</th></tr>");
+            for(let i=1; i<=5;i++){
+                salario = salario * 1.05;
+                
+                document.write("<tr><td>" + i + "</td><td>" + salario.toFixed(2) + "€</td></tr>");
+            }
+            document.write("<table>");
+        }
+
+        tablaIncrementos(salario,esValido);
+    </script>
+   </body>
+</html>
