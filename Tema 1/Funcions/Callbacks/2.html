@@ -67,6 +67,7 @@
         var codigoPostal = prompt("Introduce el código postal:");
         var reglas = /\d(5)/gm;
         if (codigoPostal.length == 5 && codigoPostal.match(reglas)) {
+            
             function validarCodigo(codigoPostal, callback) {
                 var codProvincia = codigoPostal.substring(0, 2);
                 if (!provincias.has(codProvincia)) {
