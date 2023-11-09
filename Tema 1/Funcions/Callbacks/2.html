@@ -65,25 +65,30 @@
             ['52', 'Melilla']
         ]);
         var codigoPostal = prompt("Introduce el código postal:");
-
-        function validarCodigo(codigoPostal, callback) {
-            var codProvincia = codigoPostal.substring(0, 2);
-            if (!provincias.has(codProvincia)) {
-                callback(codProvincia, null); //Si os dous primeiros numeros do código non estan no mapa
-            } else {
-                callback(null, provincias.get(codProvincia)); //Si os dous primeiros numeros do código estan no mapa
+        var reglas = /\d(5)/gm;
+        if (codigoPostal.length == 5 && codigoPostal.match(reglas)) {
+            function validarCodigo(codigoPostal, callback) {
+                var codProvincia = codigoPostal.substring(0, 2);
+                if (!provincias.has(codProvincia)) {
+                    callback(codProvincia, null); //Si os dous primeiros numeros do código non estan no mapa
+                } else {
+                    callback(null, provincias.get(codProvincia)); //Si os dous primeiros numeros do código estan no mapa
+                }
             }
-        }
 
-        function nombreProvincia(codProvincia, nombre) {
-            if (nombre) {
-                console.log("Provincia de", nombre);
-            } else {
-                console.log("No pertenece a ninguna provincia");
+            function nombreProvincia(codProvincia, nombre) {
+                if (nombre) {
+                    console.log("Provincia de", nombre);
+                } else {
+                    console.log("No pertenece a ninguna provincia");
+                }
             }
+        } else {
+            console.log("El codigo postal no es válido.")
         }
 
         validarCodigo(codigoPostal, nombreProvincia);
+
 
     </script>
 </body>
