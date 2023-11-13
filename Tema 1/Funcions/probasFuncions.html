@@ -15,12 +15,18 @@
         */
 
 
+
+
+
         /*Función con parámetros
         function raizCuadrada(numero) {
             return (Math.sqrt(numero));
         }
         console.log(raizCuadrada(4));
         */
+
+
+
 
         /* Funcións que chaman a outras
         function raizCuadrada(numero){
@@ -56,6 +62,9 @@
         console.log(mensaje);
         */
 
+
+
+
         /*Paso por valor
         var numero1=7;
         var numero2=8;
@@ -69,6 +78,9 @@
         }
         console.log(menor(numero1,numero2));
         */
+
+
+
 
         /*Paso por referencia
         var vector=[6,2,9,5,3];
@@ -89,6 +101,7 @@
         */
 
 
+
         /*Parámetros por defecto
         function dividir(numerador,denominador=1){
             return (numerador/denominador);
@@ -98,6 +111,8 @@
         console.log(dividir()); //muestra NaN
         */
 
+
+
         /*Exemplo de función anónima
         const bienvenido=function sesionIniciada(){
             console.log("Bienvenido de nuevo");
@@ -105,6 +120,8 @@
         bienvenido();
         sesionIniciada();
         */
+
+
 
         /* Exemplo de función callback
         const bienvenido = function(){
@@ -116,15 +133,51 @@
         }
         usuario(bienvenido); //debe mostrar "Bienvenido de nuevo, Breo"
         */
+
+
         
-        const usuario = function (callback) {
+        /*const usuario = function (callback) {
             console.log(callback() + "Javier");
         }
         usuario(
             function () {
                 return "Bienvenido de nuevo, ";
             }
-        )
+        )*/
+
+
+
+        /*//Clausuras
+            function mensaje(){
+                let texto ="Hola de nuevo";
+                function muestraMensaje(){
+                    console.log(texto);
+                }
+                return muestraMensaje;
+            }
+            let variable = mensaje();
+            variable();*/
+
+
+
+            /*//Funcións frecha
+            const mensaxe = ()=>{console.log("Ola!");};
+            mensaxe();
+
+            const mensaxe2 = ()=> console.log("Ola!2");;
+            mensaxe2();*/
+
+
+
+            //Recursividade
+            const factorial = (numero)=>{
+                if (numero==1){
+                    return 1;
+                } else {
+                    return numero * factorial(numero-1);
+                }
+            }
+            console.log(factorial(5));
 
     </script>
 </body>

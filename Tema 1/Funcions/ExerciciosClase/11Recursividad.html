@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Recursividad</title>
+
+<body>
+    <h1>Exercicio 11</h1>
+    <script>
+        //listar los numeros desde 0 hasta el numero que introduces
+
+        const mostrarNumeros = (numero) => {
+            if (numero <= 0) {
+                console.log(0);
+            } else {
+                mostrarNumeros(numero - 1);
+                console.log(numero);
+            }
+        }
+
+        mostrarNumeros(5);
+    </script>
+</body>
+
+</html>

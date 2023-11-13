@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>Recursividad</title>
+
+<body>
+    <h1>Exercicio 12</h1>
+    <script>
+        //listar los numeros desde un hasta el numero que introduces hasta el rango
+
+        const devolveNumero = (numero, limite) => {
+               if (numero > limite){
+                return;
+               }
+               console.log(numero);
+               devolveNumero(numero + 1, limite);
+            }
+            devolveNumero(0,33);
+    </script>
+</body>
+
+</html>
