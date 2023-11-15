@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Recursividade</title>
+
+<body>
+    <h1>Exercicio 15</h1>
+    <script>
+        /*Escribe una funcion recursiva que dado un numero entero n,
+        retorne un array con todos los número enteros en orden decreciente
+        desde n hasta 1.*/
+
+        let n=parseInt(prompt("Indica un numero para hacerlo decrecer."));
+        var array=[];
+
+        const decrecerNumero = ()=>{
+            if(n>=1){
+                array.push(n);
+                n=n-1;
+                decrecerNumero();
+            }
+        }
+        decrecerNumero();
+        document.write(array);
+    </script>
+</body>
+
+</html>

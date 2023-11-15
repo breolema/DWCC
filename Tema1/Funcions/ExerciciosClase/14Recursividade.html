@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Recursividade</title>
+
+<body>
+    <h1>Exercicio 14</h1>
+    <script>
+        /*Insertar en un array números aleatorios. El número mínimode 
+        elementos do array debe pedirse con teclado. Facer con funcions frecha e 
+        recursividade.*/
+
+        let array = [];
+        let numeroMinimo = parseInt(prompt("Indica el número mínimo de números a imprimir"));
+
+        const numerosAleatorios= () =>{
+            var num=Math.floor(Math.random()*100);
+            if(array.length<numeroMinimo){
+                array.push(num);
+                numerosAleatorios();
+            }
+        }
+        numerosAleatorios();
+        document.write(array);
+    </script>
+</body>
+
+</html>

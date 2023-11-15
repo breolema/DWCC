@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>Recursividade</title>
+
+<body>
+    <h1>Exercicio 15</h1>
+    <script>
+        /*Comprobar si é un palindromo usando recursividad*/
+
+        let palabra = ("Introduce una palabra:");
+        function esPalindromo(palabra) {
+            if (palabra === "") {
+                return true;
+            } else {
+                const primerLetra = palabra[0];
+                const ultimaLetra = palabra[palabra.length - 1];
+                const sinPrimeirasUltimas = palabra.slice(1, palabra.length - 1);
+                return (
+                    primerLetra === ultimaLetra && esPalindromo(sinPrimeirasUltimas)
+                );
+            }
+        }
+
+        console.log(esPalindromo("reconocer"));
+        console.log(esPalindromo("callos"));
+    </script>
+</body>
+
+</html>
