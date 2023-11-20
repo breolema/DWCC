@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+  <h1>Exercicio 1</h1>
+  <script>
+    /*Crear un obxecto chamado persoa que conteña os seguintes atributos:
+    Nome:
+    Apelidos:
+    Idade:
+    Ano de nacemento: DataActual-Idade
+    debe ter un método para ver os datos*/
+
+    let persoa = new Object();
+    persoa.nome = prompt("Cual es tu nombre?");
+    persoa.apellidos = prompt("Cual es tu apellido?");
+    persoa.idade = Number(prompt("Cuantos años tienes?"));
+
+    persoa.calcularEdad = function () {
+            return añoActual - persoa.añoNacimiento;
+        }
+
+        document.write(persoa.nome);
+        document.write(persoa.apelidos);
+        document.write(persoa.calcularEdad());
+
+  </script>
+</body>
+
+</html>

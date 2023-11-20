@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Clase</title>
+
+<body>
+    <h1>Exercicios Clase</h1>
+    <script>
+        /*//Xestión de obxectos
+        let vector = [4, 2, 7, 9];
+        console.log(vector.length);
+        console.log(typeof (vector));
+        console.log(typeof (console));
+        */
+
+        /*//Intanceof
+        let vector = [4, 2, 7, 9];
+        console.log(vector instanceof Array); //devolve true
+        let conjunto = new Set();
+        console.log(conjunto instanceof Map); //devolve false
+        */
+
+        /*//Obxecto Object
+        let notas = new Object();
+        notas.valores=[7,5,3,2,3,9,6];
+        notas.cantidad= notas.valores.length;
+        notas.media=notas.valores.reduce((a,b)=>a+b,0)/notas.cantidad;
+        notas.verMedia=function(){
+            console.log(notas.media);
+        }
+        notas.verMedia();*/
+
+
+        /*//Object con notación JSON
+        let viaje={
+            origen:"Granada",
+            destino:"El Cairo",
+            dias:8,
+            precio:750,
+            mostrar:function(){
+                console.log(`${viaje.origen}/${viaje.destino}`);
+                console.log(`durante ${viaje.dias} dias: EUR$${viaje.precio}`);
+            }
+        }
+        viaje.mostrar();*/
+
+        class Viaje {
+            origen="Granada";
+            destino="El Cairo";
+            dias=8;
+            precio=750;
+            constructor (or,des,di,pre){
+                this.origen=or;
+                this.destino=des;
+                this.dias=di;
+                this.precio=pre;
+            }
+            mostrar(){
+                console.log(`${this.origen}/${this.destino}`);
+                console.log(`durante ${this.dias} dias: EUR$${this.precio}`);
+            }
+        }
+
+        let miViaje=new Viaje("Barcelona","Ibiza",2,112);
+        miViaje.mostrar();
+
+    </script>
+</body>
