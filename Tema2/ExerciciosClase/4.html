@@ -1,0 +1,44 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <h1>Exercicio 3</h1>
+    <script>
+        /*Crear un obxecto chmado conta bancaria que conteña os atributos:propietario 
+        e saldo. 
+        metodos:sacar diñeiro,ingresar diñeiro.
+        debe comprobrse que hai diñeiro suficiente para sacar cando se faga algunha 
+        reirada.*/
+
+        class contaBancaria {
+            constructor(propietario,saldo){
+                if(propietario!=undefined && saldo!=undefined){
+                    this.propietario=propietario;
+                    this.saldo=saldo;
+                } else {
+                    console.log("Usuario incorrecto")
+                }
+            }
+
+            retirarSaldo(cantidad){
+                if(this.saldo<cantidad){
+                    console.log("Non tes suficiente saldo");
+                } else{
+                    this.saldo -=cantidad;
+                    console.log("Se retiraron " + cantidad + " € y ahora tienes " + this.saldo + "€")
+                }
+            }
+
+            ingresarSaldo(cantidad){
+                this.saldo += cantidad;
+                console.log("Se añadieron " + cantidad + " € y ahora tienes " + this.saldo + "€")
+            }
+        }
+
+        let persona = new contaBancaria("Breo", 1000);
+        persona.retirarSaldo(200);
+        persona.ingresarSaldo(200);
+    </script>
+</body>
+
+</html>

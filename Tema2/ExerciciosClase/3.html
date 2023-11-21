@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <h1>Exercicio 3</h1>
+    <script>
+        /*Crea un obxecto chamado usuario que permita autentificar a unha persoa
+        que ten que iniciar sesion no sistema.
+        Terá un id e un contrasinal.*/
+
+        class Usuario {
+            constructor(id,contr){
+            this.id=id;
+            this.contr=contr;
+            }
+
+            validar(){
+                let usuario="Breo";
+                let passwd=123456;
+                if(this.id==usuario && this.contr==passwd){
+                    document.write("Bienvenido " + this.id);
+                } else {
+                    document.write("Usuario ou cobtraseña incorrectos.");
+                }
+            }
+        }
+
+        let usuario = new Usuario("Breo",123456);
+        usuario.validar();
+    </script>
+</body>
+
+</html>
