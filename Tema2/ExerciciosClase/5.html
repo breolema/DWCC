@@ -1,0 +1,77 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <h1>Exercicio 3</h1>
+    <script>
+        /*Crear un obxecto prototipo para barcos que conteña o seguintes atributios:
+        Motor (valor enteiro)
+        Porto actual
+        Seguinte destino
+        Carga actual
+        Carga máxima
+        O barco pode ser cargado e descargado cun valor específico de carga. 
+        Podemos zarpar a un porto desde un porto de orixe.
+        Debemos implementar un método observadr para saber a carga, o porto de destino e
+        o motor.
+        O barco non pode ser sobrecargado, debe comprobarse*/
+
+        class Barco {
+            constructor(motor, portoActual, portoDestino, cargaActual, cargaMaxima) {
+                if (cargaActual > cargaMaxima) {
+                    cargaActual = cargaMaxima;
+                }
+                this.cargaActual = cargaActual;
+                this.cargaMaxima = cargaMaxima;
+                this.motor = motor;
+                this.portoActual = portoActual;
+                this.portoDestino = portoDestino;
+            }
+
+            cargarBarco(cantidad) {
+                if (cantidad + this.cargaActual <= this.cargaMaxima) {
+                    this.cargaActual += cantidad;
+                    console.log(`Añadiuse ${cantidad}kg, e ahora ten ${this.cargaActual}`);
+                } else {
+                    console.log("Sobrepasa a carga permitida");
+                }
+            }
+
+            descargarBarco(cantidad) {
+                if (cantidad + this.cargaActual <= this.cargaMaxima) {
+                    this.cargaActual -= cantidad;
+                    console.log(`Quitouse ${cantidad}kg, e ahora ten ${this.cargaActual}`);
+                } else {
+                    console.log("Sobrepasa a carga actual do barco");
+                }
+            }
+
+            zarpar(origen, destino) {
+                this.portoActual=origen;
+                this.portoDestino=destino;
+                console.log(`Barco zarpa desde ${origen} hacia ${destino}.`);
+            }
+
+            observador() {
+                document.write("Estado del barco: <br>");
+                document.write(`Motor: ${this.motor}<br>`);
+                document.write(`Carga actual: ${this.cargaActual}<br>`);
+                document.write(`Porto actual: ${this.portoActual}<br>`);
+                document.write(`Seguinte destino: ${this.portoDestino}<br><br><br>`);
+            }
+        }
+
+        //let origen= prompt("De donde sale o barco?");
+        //let destino= prompt("A donde vai o barco?");
+
+        let barco1 = new Barco(1000,"Cee", "Fis", 500,1000);
+        barco1.observador();
+        barco1.cargarBarco(200)
+        barco1.zarpar("Calcoba","Caforra");
+        barco1.observador();
+
+
+    </script>
+</body>
+
+</html>
