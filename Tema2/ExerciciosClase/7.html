@@ -1,0 +1,48 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <h1>Exercicio 6 Extendido</h1>
+    <script>
+        /*Crea un obxecto chamado ordenador que teña os seguintes atributos:
+        marca
+        modelo
+        memoria ram
+        Capacidade disco duro
+        Pulgadas da pantalla
+        Metodos para o obxecto:
+        toStringObserver, sirve para obter de forma textual todos os datos das especificacions
+        Ao crear un ordeador pódense indicar todos os valores por defecto da seguinte forma:
+        17 pulgadas, 512GB de disco duro, 4GB de ram. Marca e modelo necesarias*/
+
+
+        class Ordenador {
+            constructor(marca, modelo, memoriaRAM = 4, capacidadeDD = 512, pulgadas = 17) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.memoriaRAM = memoriaRAM;
+                this.capacidadeDD = capacidadeDD;
+                this.pulgadas = pulgadas;
+            }
+
+            toStringObserver() {
+                document.write(`${this.pulgadas} pulgadas, ${this.capacidadeDD}GB de disco duro, ${memoriaRAM}GB de RAM, da marca ${this.marca} modelo ${this.modelo}`)
+            }
+        }
+
+        do {
+            marca = prompt("De que marca es tu equipo?");
+            modelo = prompt("Que modelo es?");
+        } while (marca == "" &&  modelo == "")
+
+        memoriaRAM = Number(prompt("Cuanta memoria RAM tiene?"));
+        capacidadeDD = Number(prompt("Cuanta capadidad de disco duro tienes (en GB)?"));
+        pulgadas = Number(prompt("Cuantas pulgadas tiene tu pantalla?"));
+
+        let ordeador1 = new Ordenador(marca, modelo, memoriaRAM, capacidadeDD, pulgadas);
+        ordeador1.toStringObserver();
+
+    </script>
+</body>
+
+</html>

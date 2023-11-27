@@ -1,0 +1,70 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <h1>Exercicio 6 Extendido</h1>
+    <script>
+        /*Crea un obxecto película qie conteña os seguintes atributos:
+        Director, string
+        Data lanzamento, enteiro
+        Actores, string
+        Título, string
+        Presuposto, decimal
+        Permitense os seguintes constructores:
+        Completo, sen presuposto e sen data de lanzamento (3 tipos)
+        Implementar un metodo observador
+        Implementar un metodo que comprobe a "idade da película"
+        O programa principal debe permitir recoller os datos por teclado ao usuario
+        e imprimir todos os adtos co observador. Tamen debemos imprimir a idade
+        da pelicula.*/
+
+
+        class Pelicula {
+            constructor(director, lanzamento, actores, titulo, presuposto) {
+                this.director = director;
+                if (lanzamento != undefined) {
+                    this.lanzamento = lanzamento;
+                } else {
+                    this.lanzamento = 0;
+                }
+                this.actores = actores;
+                this.titulo = titulo;
+                if (presuposto != undefined) {
+                    this.presuposto = presuposto;
+                } else {
+                    this.presuposto = 0;
+                }
+            }
+
+            observador() {
+                document.write(`Director: ${this.director}<br>`);
+                document.write(`Data lanzamento: ${this.lanzamento}<br>`);
+                document.write(`Actores: ${this.actores}<br>`);
+                document.write(`Título: ${this.titulo}<br>`);
+                document.write(`Presuposto: ${this.presuposto}<br>`);
+            }
+
+            calcularIdade() {
+                if (this.lanzamento) {
+                    const anoActual = new Date().getFullYear();
+                    return anoActual - this.lanzamento;
+                } else {
+                    return "Non se proporcionou data de lanzamento";
+                }
+            }
+        }
+
+
+        var pelicula1 = new Pelicula("Director1", 2000, "Actor1, Actor2", "Título1", 10.5);
+        pelicula1.observador();
+        document.write(`Idade da película: ${pelicula1.calcularIdade()} anos<br><br>`);
+        
+        document.write("<br>")
+
+        var pelicula2 = new Pelicula("Director2", undefined, "Actor1, Actor2", "Título2");
+        pelicula2.observador();
+        document.write(`Idade da película: ${pelicula2.calcularIdade()} anos<br><br>`);
+    </script>
+</body>
+
+</html>

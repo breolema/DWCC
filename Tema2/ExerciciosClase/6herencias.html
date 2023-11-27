@@ -1,0 +1,50 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <h1>Exercicio 6</h1>
+    <script>
+        /*Deseña unha xerarquía de clases modelar os obxectos  telefono fijo e telefono movil
+        de maneira que Telefono sexa a clase nai e telefono Fixo e Movil as derivadas.
+        Recolecer atributos necesarios para todas as clases.
+        Deseñar un método para contrastar o polimorfismo.*/
+
+        class Telefono {
+            constructor(numero) {
+                this.numero = numero;
+            }
+            llamar() {
+                console.log(`Chamando desde ${this.numero}`);
+            }
+        }
+
+        class telefonoFijo extends Telefono  {
+            constructor(numero, prefijo) {
+                super(numero);
+                this.prefijo = prefijo;
+            }
+            llamar() {
+                console.log(`Chamando desde ${this.prefijo}${this.numero} (telefono fijo)`);
+            }
+        }
+
+        class telefonoMovil extends Telefono{
+            constructor(numero,operador){
+                super(numero);
+                this.operador=operador;
+            }
+            llamar(){
+                console.log(`Chamando desde ${this.numero} que é da compañía ${this.operador}`);
+            }
+        }
+
+        let llamada1 = new Telefono(123456789);
+        llamada1.llamar();
+        let llamada2 = new telefonoFijo(789864,981);
+        llamada2.llamar();
+        let llamada3 = new telefonoMovil(555555555, "Orange");
+        llamada3.llamar();
+    </script>
+</body>
+
+</html>
