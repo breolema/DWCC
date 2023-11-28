@@ -2,7 +2,7 @@
 <title>EXERCICIOS CLASE</title>
 
 <body>
-    <h1>Exercicio 6 Extendido</h1>
+    <h1>Exercicio 8</h1>
     <script>
         /*Crea un obxecto película qie conteña os seguintes atributos:
         Director, string
@@ -61,15 +61,41 @@
         }
 
 
-        var pelicula1 = new Pelicula("Director1", 2000, "Actor1, Actor2", "Título1", 10.5);
-        pelicula1.observador();
-        document.write(`Idade da película: ${pelicula1.calcularIdade()} anos<br><br>`);
-        
-        document.write("<br>")
+        //var pelicula1 = new Pelicula("Director1", 2000, "Actor1, Actor2", "Título1", 10.5);
+        //pelicula1.observador();
+        //document.write(`Idade da película: ${pelicula1.calcularIdade()} anos<br><br>`);
 
-        var pelicula2 = new Pelicula("Director2", undefined, "Actor1, Actor2", "Título2");
-        pelicula2.observador();
-        document.write(`Idade da película: ${pelicula2.calcularIdade()} anos<br><br>`);
+        //document.write("<br>")
+
+        //var pelicula2 = new Pelicula("Director2", undefined, "Actor1, Actor2", "Título2");
+        //pelicula2.observador();
+        //document.write(`Idade da película: ${pelicula2.calcularIdade()} anos<br><br>`);
+
+        //Percorrer un obxecto usando vectores
+        //let miPelicula = new Pelicula("Director1", 2000, "Actor1, Actor2", "Título1", 10.5);
+        //let vector = Object.values(miPelicula);
+        //for (let elemento of vector) {
+            //document.write(`${elemento}<br>`);
+        //}
+
+        //Mais extendido
+        let miPelicula2 = new Pelicula("Director1", 2000, "Actor1, Actor2", "Título1", 10.5);
+        let atributos=[];
+        let i=0;
+        for (let elemento in miPelicula2){
+            atributos[i]=elemento;
+            i++;
+        }
+        let valores = Object.values(miPelicula2);
+        for (i=0;i<atributos.length;i++){
+            document.write(atributos[i] + ": " + valores[i] + "<br>");
+        }
+
+        //Percorrelo sin usar vectores
+        //let miPelicula2 = new Pelicula("Director1", 2000, "Actor1, Actor2", "Título1", 10.5);
+        //for (let elemento in miPelicula2) {
+            //document.write(`${elemento}: ${miPelicula2[elemento]} <br>`);
+        //}
     </script>
 </body>
 
