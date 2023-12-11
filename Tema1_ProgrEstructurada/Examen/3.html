@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+        // Función para cargar un conjunto desde el teclado
+        function cargarConjunto(mensaje) {
+            let conjuntoStr = prompt(mensaje);
+            return new Set(conjuntoStr.split(',').map(elemento => elemento.trim()));
+        }
+
+        // Función para realizar la unión de dos conjuntos
+        function union(conjuntoA, conjuntoB) {
+            return new Set([...conjuntoA, ...conjuntoB]);
+        }
+
+        // Función para realizar la intersección de dos conjuntos
+        function interseccion(conjuntoA, conjuntoB) {
+            return new Set([...conjuntoA].filter(elemento => conjuntoB.has(elemento)));
+        }
+
+        // Función para realizar la resta de dos conjuntos (A - B)
+        function resta(conjuntoA, conjuntoB) {
+            return new Set([...conjuntoA].filter(elemento => !conjuntoB.has(elemento)));
+        }
+
+        // Cargar dos conjuntos desde el teclado
+        let conjuntoA = cargarConjunto("Introduce los elementos del conjunto A (separados por comas):");
+        let conjuntoB = cargarConjunto("Introduce los elementos del conjunto B (separados por comas):");
+
+        // Calcular la unión, intersección y resta de los conjuntos
+        let unionAB = union(conjuntoA, conjuntoB);
+        let interseccionAB = interseccion(conjuntoA, conjuntoB);
+        let restaAB = resta(conjuntoA, conjuntoB);
+
+        // Mostrar los resultados
+        console.log("Unión de los conjuntos A y B:", Array.from(unionAB).join(', '));
+        console.log("Intersección de los conjuntos A y B:", Array.from(interseccionAB).join(', '));
+        console.log("Resta de los conjuntos A y B (A - B):", Array.from(restaAB).join(', '));
+
+    </script>
+</body>
+
+</html>

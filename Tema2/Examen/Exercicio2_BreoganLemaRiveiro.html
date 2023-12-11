@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS EXAMEN</title>
+
+<body>
+  <h1>Exercicio 2</h1>
+  <script>
+    //creamos a clase nave e o seu contructor
+    class Nave {
+      constructor(lugarActual, seguinteDestino, kmRecorridos = 0, distancia = 0) {
+        this.lugarActual = lugarActual
+        this.seguinteDestino = seguinteDestino;
+        this.kmRecorridos = kmRecorridos;
+        this.distancia = distancia;
+      }
+
+      //creamos o método arrancar para enseñar os datos e sumar a distancia aos km recorridos da nave
+      arrancar() {
+        document.write(`A nave sae dende ${lugarActual}<br>`);
+        document.write(`Vai para ${this.seguinteDestino}<br>`);
+        //entendo que os kmRecorridos é o conta kilometros e a distancia é a separacion entre o punto A e o punto B
+        document.write(`Km percorridos pola nave: ${this.kmRecorridos}km<br>`);
+        this.kmRecorridos += this.distancia;
+        document.write(`Despois do traxecto terá recorridos: ${this.kmRecorridos}km<br>`);
+      }
+    }
+
+    //pedimos os datos por pantalla o usuario
+    const lugarActual = prompt("Desde donde arranca a nave?");
+    const seguinteDestino = prompt("A donde vai?");
+    const distancia = Number(prompt("Cal é a distancia entre os puntos?"));
+    const kmRecorridos = Number(prompt("Cantos kilometros ten recorridos a nave hasta agora?"));
+
+    //comprobamos que o obxecto Nave non é un mapa, e si non o é que faga crea unha nova nave e añade os datos que escribiu o usuario
+    if (Nave instanceof Map == false) {
+      let nave1 = new Nave(lugarActual, seguinteDestino, kmRecorridos, distancia);
+      nave1.arrancar();
+    } else {
+      document.write("O obxecto nave é un mapa");
+    }
+
+  </script>
+</body>
+
+</html>

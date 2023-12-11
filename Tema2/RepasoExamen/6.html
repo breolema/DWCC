@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Examen</title>
+
+<body>
+    <h1>Exercicio 6</h1>
+    <script>
+        class Vehiculo{
+            constructor(modelo, capacidad){
+                this.modelo=modelo;
+                this.capacidad=capacidad;
+            }
+            describe(){
+                document.write(`O vehículo e de modelo ${this.modelo} e ten ${this.capacidad} de capacidade<br>`);
+            }
+        }
+
+        class Avion extends Vehiculo{
+            constructor(modelo, capacidad,aerolinea){
+                super(modelo,capacidad);
+                this.aerolinea=aerolinea;
+            }
+            fly(){
+                document.write(`O avion ${this.modelo} esta voiando ca compañia ${this.aerolinea}`);
+            }
+        }
+
+        let vehiculo1 = new Avion ('Avion 33', 150, 'Iberia');
+        vehiculo1.describe();
+        vehiculo1.fly();
+
+    </script>
+</body>
+
+</html>

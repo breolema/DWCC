@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Ausencia Oscar</title>
+
+<body>
+    <h1>Exercicio 3</h1>
+    <script>
+        /*Recorre unha matriz de obxectos JSON e mostra unha propiedade específica 
+        de cada obxecto na pantalla.*/
+
+        var libro1 = '{"titulo": "Lazarillo de tormes", "autor": "Diego Hurtado de Mendoza", "anoPublicacion": 1554}';
+        var libro2 = '{"titulo": "Ola de calor", "autor": "Tom Straw", "anoPublicacion": 2009}';
+        var libro3 = '{"titulo": "El Ingenioso hidalgo Don Quijote de la Mancha", "autor": "Miguel de Cervantes", "anoPublicacion": 1605}';
+        libro1 = JSON.parse(libro1);
+        libro2 = JSON.parse(libro2);
+        libro3 = JSON.parse(libro3);
+        
+        var matriz = [libro1, libro2, libro3];
+
+        matriz.forEach(function (objeto) {
+            console.log(objeto.titulo);
+        });
+    </script>
+</body>
+
+</html>

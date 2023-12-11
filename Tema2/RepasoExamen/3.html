@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Examen</title>
+
+<body>
+    <h1>Exercicio 3</h1>
+    <script>
+        let array=["hola", "que" , "tal" , "hola"];
+
+        function contarPalabras (array){
+            const mapaPalabras = new Map();
+
+            for(palabra of array){
+                if(mapaPalabras.has(palabra)){
+                    mapaPalabras.set(palabra, mapaPalabras.get(palabra)+1);
+                } else {
+                    mapaPalabras.set(palabra,1);
+                }
+            }
+
+            mapaPalabras.forEach((valor,clave) => {
+                document.write(`${clave}: ${valor} <br>`)
+            })
+        }
+
+        contarPalabras(array);
+    </script>
+</body>
+
+</html>

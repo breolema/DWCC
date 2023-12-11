@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+        // Crear un mapa con ciudades y distancias desde el punto de origen
+        let distanciasCiudades = new Map([
+            ['CiudadA', 150],
+            ['CiudadB', 80],
+            ['CiudadC', 200],
+            ['CiudadD', 120],
+            ['CiudadE', 90]
+        ]);
+
+        // Punto de origen
+        let puntoDeOrigen = 'Origen';
+
+        // Función para calcular la distancia máxima
+        function distanciaMaxima(mapaDistancias) {
+            return Math.max(...mapaDistancias.values());
+        }
+
+        // Función para calcular la distancia mínima
+        function distanciaMinima(mapaDistancias) {
+            return Math.min(...mapaDistancias.values());
+        }
+
+        // Función para calcular la distancia media
+        function distanciaMedia(mapaDistancias) {
+            let sumaDistancias = Array.from(mapaDistancias.values()).reduce((acumulador, distancia) => acumulador + distancia, 0);
+            return sumaDistancias / mapaDistancias.size;
+        }
+
+        // Imprimir resultados
+        console.log("Distancia máxima desde el punto de origen:", distanciaMaxima(distanciasCiudades), "kilómetros");
+        console.log("Distancia mínima desde el punto de origen:", distanciaMinima(distanciasCiudades), "kilómetros");
+        console.log("Distancia media desde el punto de origen:", distanciaMedia(distanciasCiudades), "kilómetros");
+
+    </script>
+</body>
+
+</html>

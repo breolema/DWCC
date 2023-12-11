@@ -1,0 +1,105 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <script>
+        /*1. Comprobar que tipo de obxecto temos e imprimir os seus valores. Previamente, crear:
+        Un mapa con 2 libros que conteñan, Código e título.
+        Un array con dous obxectos persoa. Atributos: dni, nome e apelidos. 
+        Un obxecto chamado casa: Número e poboación. 
+        A saída por pantalla debe ser:
+        
+        Obxecto tipo: Mapa
+        Código-Título
+        1-La caza.
+    
+        Obxecto tipo: Array
+        47350553w Juan Gómez Landa
+        32582241x Ana María Pérez Lema
+    
+        Obxecto tipo: Object
+        Número: 3
+        Pobación: A Gudiña. */
+
+        const libros = new Map([
+            [1, "Pepito grillo"],
+            [2, "Manolito gafotas"]
+        ]);
+        if (libros instanceof Map == true) {
+            document.write("Obxecto tipo: Mapa<br>");
+            for (let [clave, valor] of libros) {
+                document.write(`${clave}- ${valor} <br>`);
+            }
+        }
+
+
+        let personas = [
+            ["47350553W", "Juan Gomeznawer"],
+            ["32582241X", "Ana María Pérez Lema"]
+        ];
+        if (personas instanceof Array == true) {
+            document.write("<br>Tipo de objeto: Array<br>");
+            personas.forEach(fila => {
+                document.write(fila[0] + " " + fila[1] + "<br>");
+            });
+        }
+        /*//Outra forma de recorrelo
+        for (let i = 0; i < personas.length; i++) {
+            for (let j = 0; j < personas[i].length; j++) {
+                document.write(`${personas[i][j]}`);
+            }
+            document.write(`<br>`)
+        }*/
+
+        class xente {
+            dni;
+            nombre;
+            constructor(dni, nombre) {
+                this.dni = dni;
+                this.nombre = nombre;
+            }
+            observador() {
+                document.write(this.dni);
+                document.write(this.nombre);
+            }
+        }
+
+        let arraipersonas = [];
+        if (arraipersonas instanceof Array) {
+            for (let i = 0; i < 2; i++) {
+                nomepersona = prompt("introduce o nome da persona");
+                dnipersona = prompt("introduce dni");
+                let persona = new xente(nomepersona, dnipersona);
+                arraipersonas.push(persona);
+            }
+            for (let a = 0; a < arraipersonas.length; a++) {
+                document.write(arraipersonas[a].observador());
+            }
+        } else {
+            document.write("non é un array");
+        }
+
+
+        class Direccion {
+            numero;
+            poblacion = "";
+            constructor(numero, poblacion) {
+                this.numero = numero;
+                this.poblacion = poblacion;
+            }
+
+            observador() {
+                document.write(`Número: ${this.numero}<br>`);
+                document.write(`Pobación: ${this.poblacion}`);
+            }
+        }
+        if (Direccion instanceof Object == true) {
+            document.write("<br>Obxecto tipo: Object<br>");
+            let direccion1 = new Direccion(5, "Cee");
+            direccion1.observador();
+        }
+
+    </script>
+</body>
+
+</html>

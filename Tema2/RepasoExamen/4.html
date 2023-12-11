@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>Examen</title>
+
+<body>
+    <h1>Exercicio 4</h1>
+    <script>
+        let fraseUser = prompt("Escribe una frase.");
+
+        function contarLetras(fraseUser) {
+            const vector = fraseUser.split(" ");
+            const mapaLongitudes = new Map();
+            for (palabra of vector) {
+                mapaLongitudes.set(palabra, palabra.length);
+            }
+
+            mapaLongitudes.forEach((longitud, palabra) => {
+                document.write(palabra + " --- " + longitud + "<br>");
+            });
+        }
+
+        contarLetras(fraseUser);
+    </script>
+</body>
+
+</html>

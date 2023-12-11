@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS EXAMEN</title>
+
+<body>
+    <h1>Exercicio 1</h1>
+    <script>
+
+        //creamos a clase producto
+        class Producto {
+            constructor(codigo, nome, proveedor, existencasActuais=0, ultimaVenta, ultimaCompra) {
+                this.codigo = codigo;
+                this.nome = nome;
+                this.proveedor = proveedor;
+                this.existencasActuais = existencasActuais;
+                this.ultimaVenta = ultimaVenta;
+                this.ultimaCompra = ultimaCompra;
+            }
+
+            comprar(cantidade=0){
+                this.existencasActuais+=cantidade;
+            }
+
+            vender(cantidade){
+                this.existencasActuais-=cantidade;
+            }
+
+            //creamos un observador para imprimir os datos dos productos
+            observador() {
+                document.write(`Código: ${this.codigo}<br>`);
+                document.write(`Nome: ${this.nome}<br>`);
+                document.write(`Provedor: ${this.proveedor}<br>`);
+                document.write(`Existencias actuais: ${this.existencasActuais} unidades<br>`);
+                document.write(`Data da última venta realizada: ${this.ultimaVenta}<br>`);
+                document.write(`Data da última compra realizada: ${this.ultimaCompra}<br>`);
+            }
+        }
+        //De esta forma imprimimos 1 producto
+        document.write("1 producto<br>");
+        const codigo1 = prompt('Introduce o código do producto:');
+        const nome1 = prompt('Introduce o nome do producto:');
+        const proveedor1 = prompt('Introduce o nome do proveedor');
+        const existencasActuais1 = prompt('Introduce as existencias actuais:');
+        const ultimaVenta1 = prompt('Introduce a fecha da ultima venta:');
+        const ultimaCompra1 = prompt('Introduce a fecha da ultima compra:');
+        //creamos un novo producto e pasamoslle os parametros queindicou o usuario
+        const producto1 = new Producto(codigo1, nome1, proveedor1, existencasActuais1, ultimaVenta1, ultimaCompra1);
+        producto1.observador();
+
+
+
+        document.write("<br>Compramos productos<br>");
+        const codigo2 = prompt('Introduce o código do producto:');
+        const nome2 = prompt('Introduce o nome do producto:');
+        const proveedor2 = prompt('Introduce o nome do proveedor');
+        const cantidade1 = Number(prompt("Cantas unidades queres comprar do producto?"));
+        const ultimaCompra2=prompt("Indica a fecha da compra.")
+        //creamos un novo producto e pasamoslle os parametros queindicou o usuario
+        const producto2 = new Producto(codigo2, nome2, proveedor2,ultimaCompra2);
+        producto1.comprar(cantidade1);
+        producto1.observador();
+
+
+
+        document.write("<br>Vendemos productos<br>");
+        const codigo3 = prompt('Introduce o código do producto:');
+        const nome3 = prompt('Introduce o nome do producto:');
+        const proveedor3 = prompt('Introduce o nome do proveedor');
+        const cantidade3 = Number(prompt("Cantas unidades queres comprar do producto?"));
+        const ultimaVenta3=prompt("Indica a fecha da venta.")
+        //creamos un novo producto e pasamoslle os parametros queindicou o usuario
+        const producto3 = new Producto(codigo3, nome3, proveedor3,ultimaVenta3);
+        producto1.comprar(cantidade1);
+        producto1.observador();
+
+
+
+
+        //desta forma imprimimos 3 productos usando un bucle
+        document.write("Impresion dos 3 productos con arrays.<br>")
+        //creamos a funcion producto para chamar a ela as veces que necesitemos para añadir os productos
+        function crearProducto() {
+            const codigo = prompt('Introduce o código do producto:');
+            const nome = prompt('Introduce o nome do producto:');
+            const proveedor = prompt('Introduce o nome do proveedor');
+            const existencasActuais = prompt('Introduce as existencias actuais:');
+            const ultimaVenta = prompt('Introduce a fecha da ultima venta:');
+            const ultimaCompra = prompt('Introduce a fecha da ultima compra:');
+            return new Producto(codigo, nome, proveedor, existencasActuais, ultimaVenta, ultimaCompra);
+        }
+
+        //creamos o array para añadir os productos
+        var productos = [];
+
+        //chamamos usando un bucle a funcion de crear os productos para asi usala neste caso 3 veces
+        for (let i = 0; i < 3; i++) {
+            const producto = crearProducto();
+            productos.push(producto);
+        }
+
+        // usamos observadores para imprimir o contido de cada producto
+        for (let i = 0; i < productos.length; i++) {
+            productos[i].observador();
+        }
+
+    </script>
+</body>
+
+</html>

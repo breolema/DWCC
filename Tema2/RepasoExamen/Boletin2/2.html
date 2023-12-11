@@ -1,0 +1,37 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <script>
+        /*2. Crear unha función que recibe dous parámetros x e y e xere dentro da 
+        función un array de x X y elementos que deberán ser impresos.*/
+
+        let x;
+        let y;
+        let arrayExterno = [];
+
+        function crearArray(x, y, arrayinterno) {
+            for (let i = 0; i < x; i++) {
+                arrayinterno.push([]);
+                for (let j = 0; j < y; j++) {
+                    arrayinterno[i][j] = Math.floor(Math.random() * 20) + 1;
+                }
+            }
+
+            document.write("<table border=1>")
+            for (let i = 0; i < arrayinterno.length; i++) {
+                document.write("<tr>")
+                for (let j = 0; j < y; j++) {
+                    document.write("<td>" + arrayinterno[i][j] + "</td>");
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+        }
+
+
+        crearArray(5, 7, arrayExterno)
+    </script>
+</body>
+
+</html>

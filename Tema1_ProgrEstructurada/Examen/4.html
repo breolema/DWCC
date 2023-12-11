@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+        // Definir un array con 5 nombres de personas
+        let nombres = ["Carlos", "Ana", "Pedro", "Laura", "Juan"];
+
+        // Crear un mapa para almacenar la posición y el nombre de la persona
+        let mapaPersonas = new Map();
+
+        // Llenar el mapa con los datos del array
+        for (let i = 0; i < nombres.length; i++) {
+            mapaPersonas.set(i, nombres[i]);
+        }
+
+        // Imprimir el resultado del mapa
+        console.log("Mapa de posiciones y nombres:");
+        mapaPersonas.forEach((nombre, posicion) => {
+            console.log(`Posición ${posicion}: ${nombre}`);
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Examen</title>
+
+<body>
+    <h1>Exercicio 5</h1>
+    <script>
+        let numero;
+
+        while (true) {
+            const numeroUsuario = prompt("Introduce un número natural:");
+
+            numero = parseInt(numeroUsuario);
+
+            if (Number.isInteger(numero) && numero > 0) {
+                break;
+            } else {
+                alert("Por favor, introduce un número natural válido.");
+            }
+        }
+
+        function imprimir(n) {
+            for (let i = 1; i <= n; i++) {
+                let linea = "";
+                for (let j = 1; j <= i; j++) {
+                    linea += i + " ";
+                }
+                document.write(linea + "<br>");
+            }
+        }
+
+        imprimir(numero);
+
+
+    </script>
+</body>
+
+</html>

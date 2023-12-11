@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Ausencia Oscar</title>
+
+<body>
+    <h1>Exercicio 2</h1>
+    <script>
+        /*Converte un obxecto JSON nun obxecto JavaScript e accede a unha das súas 
+        propiedades. Imprime o resultado nun documento*/
+
+        var libroJSON = '{"titulo": "Lazarillo de tormes", "autor": "Diego Hurtado de Mendoza", "anoPublicacion": 1554}';
+
+        var libro = JSON.parse(libroJSON);
+
+        console.log("Titulo do libro: " + libro.titulo);
+        console.log("Autor: " + libro.autor);
+        console.log("Ano de publicación: " + libro.anoPublicacion);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+     let alumnos = [];
+
+while (true) {
+    console.log("Menú:");
+    console.log("a) Cargar alumnos.");
+    console.log("b) Eliminar un alumno.");
+    console.log("c) Agregar nota a un alumno.");
+    console.log("d) Borrar nota a un alumno.");
+    console.log("e) Sair");
+
+    let opcion = prompt("Escolla unha opción:");
+
+    switch (opcion.toLowerCase()) {
+        case 'a':
+            let nombre = prompt("Introduce o nome do alumno:");
+            let notas = prompt("Introduce as notas do alumno (separadas por comas):").split(',').map(Number);
+            alumnos.push([nombre, notas]);
+            console.log("Alumno cargado exitosamente.");
+            break;
+        case 'b':
+            let nombreEliminar = prompt("Introduce o nome do alumno a eliminar:");
+            alumnos = alumnos.filter(alumno => alumno[0] !== nombreEliminar);
+            console.log("Alumno eliminado exitosamente.");
+            break;
+        case 'c':
+            let nombreAgregarNota = prompt("Introduce o nome do alumno ao que desexas engadir unha nota:");
+            let notaAgregar = prompt("Introduce a nota a engadir:");
+            let alumnoAgregarNota = alumnos.find(a => a[0] === nombreAgregarNota);
+            if (alumnoAgregarNota) {
+                alumnoAgregarNota[1].push(Number(notaAgregar));
+                console.log("Nota engadida exitosamente.");
+            } else {
+                console.log("Alumno non encontrado.");
+            }
+            break;
+        case 'd':
+            let nombreBorrarNota = prompt("Introduce o nome do alumno ao que desexas borrar unha nota:");
+            let notaIndexBorrar = prompt("Introduce o índice da nota a borrar:");
+            let alumnoBorrarNota = alumnos.find(a => a[0] === nombreBorrarNota);
+            if (alumnoBorrarNota) {
+                if (notaIndexBorrar >= 0 && notaIndexBorrar < alumnoBorrarNota[1].length) {
+                    alumnoBorrarNota[1].splice(notaIndexBorrar, 1);
+                    console.log("Nota borrada exitosamente.");
+                } else {
+                    console.log("Índice de nota non válido.");
+                }
+            } else {
+                console.log("Alumno non encontrado.");
+            }
+            break;
+        case 'e':
+            console.log("Saíndo do menú.");
+            break;
+        default:
+            console.log("Opción non válida. Tente de novo.");
+            break;
+    }
+
+    if (opcion.toLowerCase() === 'e') {
+        break;
+    }
+}
+
+
+    </script>
+</body>
+
+</html>

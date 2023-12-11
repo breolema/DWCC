@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+     /* Dado un array de lonxitud 9. Percorrer o array e imprimir en 
+	 asteriscos o numero presente en cada posición.
+        Debe:
+        Cargarse o array con números que poden ser aleatorios.
+        Os numeros só deberán ser do 1 o 50*/
+
+	let array=[];
+
+	for(let i=0;i<9;i++){
+		let numero=Math.floor(Math.random() * 50) + 1;
+        array.push(numero);
+	}
+
+	for(let i=0;i<array.length;i++){
+		let numero=array[i];
+		let asteriscos='*'.repeat(numero);
+		document.write(`Posición ${i + 1}: ${asteriscos}<br>`);
+	}
+
+    </script>
+</body>
+
+</html>

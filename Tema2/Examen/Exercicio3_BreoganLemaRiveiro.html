@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS EXAMEN</title>
+
+<body>
+  <h1>Exercicio 3</h1>
+  <script>
+    //creamos o Mapa añadindo nos os datos
+    const lista = new Map([
+      ["pera", 1.25],
+      ["manzana", 1.70],
+      ["kiwi", 2.90],
+      ["mandarina", 1.19],
+      ["fresa", 3.75],
+    ]);
+
+    //creamos a funcion mostrarLista() para mostrar os precios da lista
+    function mostrarLista() {
+      //recorremos o mapa usando un forEach para recoller tanto a clave como o valor
+      lista.forEach((valor, clave) => {
+        //e imprimimos por pantalla a lista
+        document.write(`${clave}: ${valor} <br>`)
+      })
+    }
+    //chamamosa funcion mostrarLista e pasamoslle por parametro o noso mapa chamado lista
+    mostrarLista(lista);
+
+
+    //Creamos a funcion clacularPrecio para calcular a cantidade de kilos que quere unha persoa de unha fruta concreta
+    function calcularPrecio(fruta, kg) {
+      //comprobamos si a fruta esta dentro do mapa co .has, si non enviamos un mensaxe decindo que non está
+      if (lista.has(fruta)) {
+        //usando .get(fruta) obtemos o valor (precio) da fruta que queremos  
+        let precio = lista.get(fruta);
+        let precioFinal = precio * kg;
+        document.write(`<br>Vostede elexiu ${kg}kg de ${fruta}<br>O prezo final é de ${parseFloat(precioFinal)}€`);
+      } else {
+        document.write("<br>Disculpe non dispoñemos desta froita.");
+      }
+    }
+
+    //pedimos por pantalla os valores e chamamos a funcion usandoos
+    let fruta = prompt("Que fruta quiere buscar?");
+    fruta = fruta.toLocaleLowerCase();
+    let kg = Number(prompt("Cantos kg de fruta quere?"));
+    calcularPrecio(fruta, kg);
+
+  </script>
+</body>
+
+</html>

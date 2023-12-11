@@ -1,0 +1,38 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <script>
+        /*1. Xerar 500 números aleatorios do 1 ao 500 que serán volcados nun array. 
+        Pasar este array por referencia a unha función e imprimir por cada un deses 
+        números se é par ou impar. */
+
+        //generamos os 500 numeros aleatorios
+        let numerosAleatorios = [];
+        for (let i = 0; i < 500; i++) {
+            numerosAleatorios.push(Math.floor(Math.random() * 500) + 1);
+        }
+
+        //comprobamos si es par o impar
+        function esPar(numero) {
+            if (numero % 2 == 0) {
+                return 'par';
+            } else {
+                return 'impar';
+            }
+        }
+
+        //creamos la funcion imprimir a la cual le pasamos el array que recorremos
+        //con el bucle for y llamando a la funcion esPar comprobamos si es par o impar
+        function imprimir(numerosAleatorios) {
+            for (let i = 0; i < numerosAleatorios.length; i++) {
+                document.write(`El numero ${numerosAleatorios[i]} es ${esPar(numerosAleatorios[i])}<br>`);
+            }
+        }
+
+        //llamada a ala funcion
+        imprimir(numerosAleatorios);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>EXERCICIOS EXAMEN</title>
+
+<body>
+  <h1>Exercicio 4</h1>
+  <script>
+    // Función para recibir as cadeas de texto
+    function recibirCadeas(callback) {
+      //creamos un array para introducir as cadeas
+      var cadeas = [];
+      let cadena1 = prompt("Escribe unha palabra,frase...");
+      let cadena2 = prompt("Escribe outra palabra,frase...");
+      cadeas.push(cadena1.trim());
+      cadeas.push(cadena2.trim());
+      //facemos un callback da funcion  para imprimir o texto final
+      callback(cadeas);
+    }
+
+    //funcion que crea o texto final
+    function crearTextoFinal(cadeas) {
+      var textoFinal = "";
+      //con un bucle sacamos do array s duas cadeas e imprimimolas nunha soa cadea
+      for (var i = 0; i < cadeas.length; i++) {
+        textoFinal += cadeas[i] + " ";
+      }
+      //imprimimos o texto final
+      document.write(textoFinal.trim());
+    }
+
+    // chamamos a función, pasando outra función como parámetro
+    recibirCadeas(crearTextoFinal);
+
+
+  </script>
+</body>
+
+</html>

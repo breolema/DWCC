@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <h1>Exercicios Repaso </h1>
+    <script>
+        // Función para validar una página web
+        function validarPaginaWeb(url) {
+            // Comprobar si la URL comienza con "www"
+            if (url.startsWith("www.")) {
+                // Obtener el dominio (parte después de "www.")
+                let dominio = url.slice(4);
+
+                // Comprobar si el dominio tiene dos o tres letras
+                if (dominio.match(/^[a-zA-Z]{2,3}$/)) {
+                    console.log("La página web es válida.");
+                } else {
+                    console.log("Error: El dominio debe tener dos o tres letras.");
+                }
+            } else {
+                console.log("Error: La URL debe comenzar con 'www'.");
+            }
+        }
+
+        // Ejemplos de uso
+        validarPaginaWeb("www.barcelona.com"); // Válido
+        validarPaginaWeb("www.xardin.au");     // Válido
+        validarPaginaWeb("www.ejemplo.es");    // Inválido (dominio con más de tres letras)
+        validarPaginaWeb("http://www.google.com");  // Inválido (no comienza con "www")
+
+    </script>
+</body>
+
+</html>

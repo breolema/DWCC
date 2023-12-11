@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Examen</title>
+
+<body>
+    <h1>Exercicio 7</h1>
+    <script>
+        class User {
+            constructor(username, emailOId) {
+                const emailComprobacion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (emailComprobacion.test(emailOId)) {
+                    this.username = username;
+                    this.email = emailOId;
+                    this.socialnetid = null;
+                } else {
+                    this.username = username;
+                    this.socialnetid = emailOId;
+                    this.email = null;
+                }
+            }
+
+            showInfo() {
+                if (this.email !== null) {
+                    document.write(`Usuario: ${this.username}, Email: ${this.email}<br>`);
+                } else if (this.socialnetid !== null) {
+                    document.write(`Usuario: ${this.username}, SocialNet ID: ${this.socialnetid}<br>`);
+                }
+            }
+        }
+
+
+        const usuarioEmail = new User('usuario1', 'usuario1@example.com');
+        usuarioEmail.showInfo();
+
+        const usuarioId = new User('usuario2', '123456789');
+        usuarioId.showInfo();
+    </script>
+
+</body>
+
+</html>

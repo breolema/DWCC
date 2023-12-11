@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>Examen</title>
+
+<body>
+    <h1>Exercicio 8</h1>
+    <script>
+        /*Crea un obxecto chamado álbume cos seguintes atributos.
+        1. Nome do álbume.
+        2. Autor.
+        3. Cancións do álbume (un array de strings).
+        4. Data de lanzamento. 
+        Carga 3 álbumes pedindo os datos por teclado.
+        Posteriormente, utilizando observadores, imprime o contido de cada álbum. */
+        class Album {
+            constructor(nombre, autor, cancions, lanzamento) {
+                this.nombre = nombre;
+                this.autor = autor;
+                this.cancions = cancions;
+                this.lanzamento = lanzamento;
+            }
+
+            verInfo() {
+                document.write(this.nome + " " + this.autor + " " + this.cancions +
+                    " " + this.lanzamento + "<br>")
+            }
+        }
+
+        // Crear un obxecto Álbum pedindo los datos por teclado
+        function crearAlbum() {
+            const nombre = prompt('Introduce o nome do álbum:');
+            const autor = prompt('Introduce o autor do álbum:');
+            const cancions = prompt('Introduce as cancións do álbum separadas por comas');
+            const lanzamento = prompt('Introduce a data de lanzamento do álbum:');
+            return new Album(nombre, autor, cancions, lanzamento);
+        }
+
+        var albumes = [];
+
+        // Solicitar os datos e crear los álbumes utilizando un bucle for
+        for (let i = 0; i < 2; i++) {
+            const album = crearAlbum();
+            albumes.push(album);
+        }
+
+        // Utilizar observadores para imprimir o contido de cada album
+        for (let i = 0; i < albumes.length; i++) {
+            albumes[i].verInfo();
+        }
+
+    </script>
+
+</body>
+
+</html>
