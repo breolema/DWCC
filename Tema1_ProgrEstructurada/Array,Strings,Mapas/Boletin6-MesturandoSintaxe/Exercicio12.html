@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 2</h1>
+    <script>
+        const imagenesJugadores = document.querySelectorAll('img');
+        const informacionJugador = document.getElementById('informacionJugador');
+        const nombreJugador = document.getElementById('nombreJugador');
+        const posicionJugador = document.getElementById('posicionJugador');
+
+        imagenesJugadores.forEach((imagen) => {
+            imagen.addEventListener('mouseover', function () {
+                const jugador = this.getAttribute('data-jugador');
+                const [nombre, posicion] = jugador.split(',');
+                nombreJugador.textContent = nombre;
+                posicionJugador.textContent = posicion;
+                informacionJugador.style.display = 'block';
+            });
+
+            imagen.addEventListener('mouseout', function () {
+                informacionJugador.style.display = 'none';
+            });
+        });
+
+        const equipo1 = document.getElementById('equipo1');
+        const equipo2 = document.getElementById('equipo2');
+
+        equipo1.addEventListener('click', function () {
+            const fila = this.parentElement;
+            const celdas = fila.children;
+            celdas[0].innerHTML = '<img src="jugador1.jpg" data-jugador="Jugador 1,Delantero">';
+            celdas[1].innerHTML = '<img src="jugador2.jpg" data-jugador="Jugador 2,Defensa">';
+        });
+
+        equipo2.addEventListener('click', function () {
+            const fila = this.parentElement;
+            const celdas = fila.children;
+            celdas[0].innerHTML = '<img src="jugador3.jpg" data-jugador="Jugador 3,Mediocampista">';
+            celdas[1].innerHTML = '<img src="jugador4.jpg" data-jugador="Jugador 4,Portero">';
+        });
+    </script>
+</body>
+
+</html>

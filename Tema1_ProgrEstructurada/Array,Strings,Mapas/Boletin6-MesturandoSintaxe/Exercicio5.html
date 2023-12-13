@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 5</h1>
+    <script>
+        const numeroArabigo = parseInt(prompt("Introduce un número arábigo (1-3999):"));
+        let numeroRomano = "";
+
+        if (numeroArabigo >= 1 && numeroArabigo <= 3999) {
+            const valoresArabigos = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
+            const valoresRomanos = ["I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"];
+
+            let indice = valoresArabigos.length - 1;
+
+            while (numeroArabigo > 0) {
+                const valorArabigo = valoresArabigos[indice];
+                if (numeroArabigo >= valorArabigo) {
+                    numeroRomano += valoresRomanos[indice];
+                    numeroArabigo -= valorArabigo;
+                } else {
+                    indice--;
+                }
+            }
+
+            document.write(`El número romano equivalente a ${numeroArabigo} es: ${numeroRomano}`);
+        } else {
+            document.write("Número arábigo fuera del rango válido (1-3999).");
+        }
+    </script>
+</body>
+
+</html>

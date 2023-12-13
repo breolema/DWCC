@@ -5,7 +5,44 @@
 <body>
   <h1>Exercicio 4</h1>
   <script>
-        
+    const numeroRomano = prompt("Introduce un número romano:").toUpperCase();
+    let numeroArabigo = 0;
+    let numeroArabigoAnterior = 0;
+
+    for (let i = numeroRomano.length - 1; i >= 0; i--) {
+      const caracter = numeroRomano[i];
+
+      switch (caracter) {
+        case "I":
+          numeroArabigo += (numeroArabigoAnterior > 1) ? -1 : 1;
+          break;
+        case "V":
+          numeroArabigo += 5;
+          break;
+        case "X":
+          numeroArabigo += (numeroArabigoAnterior > 10) ? -10 : 10;
+          break;
+        case "L":
+          numeroArabigo += 50;
+          break;
+        case "C":
+          numeroArabigo += (numeroArabigoAnterior > 100) ? -100 : 100;
+          break;
+        case "D":
+          numeroArabigo += 500;
+          break;
+        case "M":
+          numeroArabigo += 1000;
+          break;
+        default:
+          document.write("Número romano no válido.");
+          break;
+      }
+
+      numeroArabigoAnterior = (caracter === "I" || caracter === "X" || caracter === "C") ? numeroArabigoAnterior + parseInt(caracter) : 0;
+    }
+
+    document.write(`El número arábigo equivalente a ${numeroRomano} es: ${numeroArabigo}`);
   </script>
 </body>
 

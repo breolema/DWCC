@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 11</h1>
+    <script>
+        const numeroForm = document.getElementById("numeroForm");
+        const numeroInput = document.getElementById("numero");
+        const numeroPalabrasP = document.getElementById("numeroPalabras");
+
+        numeroForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const numero = parseFloat(numeroInput.value);
+
+            if (!isNaN(numero) && numero >= 0) {
+                const unidades = ["", "Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho", "Nueve"];
+                const decenas = ["", "Diez", "Veinte", "Treinta", "Cuarenta", "Cincuenta", "Sesenta", "Setenta", "Ochenta", "Noventa"];
+                const centenas = ["", "Ciento", "Doscientos", "Trescientos", "Cuatrocientos", "Quinientos", "Seiscientos", "Setecientos", "Ochocientos", "Novecientos"];
+
+                let numeroEnPalabras = "";
+
+                if (numero < 10) {
+                    numeroEnPalabras = unidades[numero];
+                } else if (numero < 100) {
+                    const decena = Math.floor(numero / 10);
+                    const unidad = numero % 10;
+                    numeroEnPalabras = decenas[decena];
+                    if (unidad > 0) {
+                        numeroEnPalabras += " y " + unidades[unidad];
+                    }
+                } else if (numero < 1000) {
+                    const centena = Math.floor(numero / 100);
+                    const resto = numero % 100;
+                    numeroEnPalabras = centenas[centena];
+                    if (resto > 0) {
+                        numeroEnPalabras += " " + convertirNumeroARespuesta(resto);
+                    }
+                }
+
+                numeroPalabrasP.textContent = numeroEnPalabras;
+            } else {
+                numeroPalabrasP.textContent = "Introduce un número decimal positivo.";
+            }
+        });
+
+        function convertirNumeroARespuesta(numero) {
+            // Implementa la lógica para convertir números mayores en palabras aquí
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+  <h1>Exercicio 1</h1>
+  <script>
+    let partidos = [
+        ["Real Madrid", "Barcelona"],
+        ["Manchester United", "Bayern Munich"],
+        ["Deportivo", "Celta"],
+        ["Huesca", "Betis"],
+        ["Ponferradina", "Bilbao"],
+      ];
+
+      let apuestas = [];
+
+      for (let i = 0; i < partidos.length; i++) {
+        let partido = partidos[i];
+        let apuesta = prompt(
+          `Apuesta para o partido ${partido[0]} vs ${partido[1]}: 1, X o 2`
+        );
+        apuestas.push(apuesta);
+      }
+
+      let aciertos = 0;
+      let fallos = 0;
+
+      const resultados = [];
+
+      for (let i = 0; i < partidos.length; i++) {
+        let partido = partidos[i];
+        let resultado = prompt(
+          `Resultado del partido ${partido[0]} vs ${partido[1]}: 1, X o 2`
+        );
+
+        if (apuestas[i] === resultado) {
+          aciertos++;
+        } else {
+          fallos++;
+        }
+      }
+
+      document.write(`Aciertos: ${aciertos}`);
+      document.write(`<br>Fallos: ${fallos}`);
+  </script>
+</body>
+
+</html>

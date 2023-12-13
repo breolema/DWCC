@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 2</h1>
+    <script>
+        const mazo = [
+            "1 de Bastos", "2 de Espadas", "3 de Oros", "4 de Espadas",
+            "1 de Copas", "2 de Copas", "3 de Oros", "4 de Bastos",
+        ];
+
+        const jugador1 = [];
+        const jugador2 = [];
+
+        for (let i = 0; i < 5; i++) {
+            const cartaJugador1 = mazo.shift();
+            jugador1.push(cartaJugador1);
+
+            const cartaJugador2 = mazo.shift();
+            jugador2.push(cartaJugador2);
+        }
+
+        console.log("Cartas del jugador 1:", jugador1);
+        console.log("Cartas del jugador 2:", jugador2);
+    </script>
+</body>
+
+</html>

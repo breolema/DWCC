@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Strings</title>
+
+<body>
+    <h4>Ejercicio 5</h4>
+
+    <script>
+        const cadena = "Esta es una cadena de ejemplo que contiene caracteres.";
+
+        const caracterEspecifico = "a";
+        let contador = 0;
+
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] === caracterEspecifico) {
+                contador++;
+            }
+        }
+
+        document.write(`El carácter '${caracterEspecifico}' aparece ${contador} veces en la cadena.`);
+    </script>
+</body>
+
+</html>

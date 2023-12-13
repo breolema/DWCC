@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 7</h1>
+    <script>
+        const frase = prompt("Introduce una frase para comprobar si es un palíndromo:").toLowerCase();
+
+        let esPalindromo = true;
+
+        for (let i = 0, j = frase.length - 1; i < j; i++, j--) {
+            if (frase[i] !== frase[j] && frase[i] !== " " && frase[j] !== " ") {
+                esPalindromo = false;
+                break;
+            }
+        }
+
+        if (esPalindromo) {
+            document.write("La frase es un palíndromo.");
+        } else {
+            document.write("La frase no es un palíndromo.");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Vectores</title>
+
+<body>
+    <h4>Exercicio 8</h4>
+
+    <script>
+        let numero = prompt(`Cuantos numeros de elementos son:`);
+
+        var vectorElemento = [];
+        var vectorSumado = [];
+        for (let i = 0; i < numero; i++) {
+            vectorElemento[i] = vectorElemento.push(
+                vectorElemento[i] + vectorElemento[i]
+            );
+            for (let j = 0; j < numero[i]; j++) {
+                vectorSumado[j] = vectorSumado.push(
+                    vectorElemento[i] + vectorElemento[i]
+                );
+            }
+        }
+        document.write(vectorSumado);
+    </script>
+</body>
+
+</html>

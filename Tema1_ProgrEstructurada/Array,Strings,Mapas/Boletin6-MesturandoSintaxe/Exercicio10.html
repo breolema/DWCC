@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 10</h1>
+    <form id="fraseForm">
+        <label for="frase">Introduce una frase: </label>
+        <input type="text" id="frase" name="frase">
+        <input type="submit" value="Calcular Estadísticas">
+    </form>
+    <p>Estadísticas:</p>
+    <p id="letras">Letras: 0</p>
+    <p id="numeros">Números: 0</p>
+    <p id="otros">Otros caracteres: 0</p>
+
+    <script>
+        const fraseForm = document.getElementById("fraseForm");
+        const letrasP = document.getElementById("letras");
+        const numerosP = document.getElementById("numeros");
+        const otrosP = document.getElementById("otros");
+
+        fraseForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const fraseInput = document.getElementById("frase");
+            const frase = fraseInput.value;
+
+            let letras = 0;
+            let numeros = 0;
+            let otros = 0;
+
+            for (let i = 0; i < frase.length; i++) {
+                const caracter = frase.charAt(i);
+                if (caracter.match(/[a-zA-Z]/)) {
+                    letras++;
+                } else if (caracter.match(/[0-9]/)) {
+                    numeros++;
+                } else {
+                    otros++;
+                }
+            }
+
+            letrasP.textContent = `Letras: ${letras}`;
+            numerosP.textContent = `Números: ${numeros}`;
+            otrosP.textContent = `Otros caracteres: ${otros}`;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>Boletin 6</title>
+
+<body>
+    <h1>Exercicio 6</h1>
+    <script>
+        let lado1 = prompt("Introduce un lado en centímetros:");
+        let lado2 = prompt("Introduce el tamaño de otro lado también en centímetros: ");
+        let lado3 = prompt("Ultimo lado también en centímetros: ");
+
+        if (lado1 == lado2 && lado1 == lado3) {
+            document.write("Tu triángulo es un triángulo equilátero");
+        } else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3) {
+            document.write("Tu triángulo es un triángulo escaleno");
+        } else {
+            document.write("Tu triángulo es un triángulo isósceles");
+        }
+    </script>
+</body>
+
+</html>
