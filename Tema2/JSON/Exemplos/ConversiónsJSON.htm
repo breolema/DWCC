@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>CONVERSIÓN DE JSON A OBJETO JAVASCRIPT E VICEVERSA</title>
+
+<body>
+    <script>
+        // Definir un obxecto JSON que representa un producto
+        var productoJSON = '{"nombre": "iPhone 12", "precio": 999, "stock": 10}';
+
+        // Converter o objeto JSON a un obxecto JavaScript
+        var producto = JSON.parse(productoJSON);
+        // Imprimir las propiedades do producto en pantalla
+        console.log("Nombre: " + producto.nombre);
+        console.log("Precio: " + producto.precio);
+        console.log("Stock: " + producto.stock);
+
+        //Agora facemos a conversión ao revés
+        // Definir un objeto JavaScript que representa un producto
+        var producto = {
+            nombre: "iPhone 12",
+            precio: 999,
+            stock: 10
+        };
+
+        // Convertir el objeto JavaScript a un objeto JSON
+        var productoJSON = JSON.stringify(producto);
+
+        // Imprimir el objeto JSON en pantalla
+        console.log(productoJSON);
+    </script>
+</body>
+
+</head>
+
+</html>

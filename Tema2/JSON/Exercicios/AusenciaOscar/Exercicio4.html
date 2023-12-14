@@ -3,12 +3,21 @@
 <title>Exercicios Ausencia Oscar</title>
 
 <body>
-    <h1>Exercicio 3</h1>
+    <h1>Exercicio 4</h1>
     <script>
         /*Filtra obxectos JSON nunha matriz en función dunha condición específica se 
         son hardware ou software (un campo que permita discriminar isto).*/
 
-        
+        const jsonArray = [
+            { nome: "PC", tipo: "hardware" },
+            { nome: "Windows 10", tipo: "software" },
+            { nome: "Portatil", tipo: "hardware" },
+            { nome: "Windows 11", tipo: "software" }
+        ];
+
+        function filtrarPorTipo(objeto) {
+            return objeto.tipo === "hardware";
+        }
     </script>
 </body>
 
