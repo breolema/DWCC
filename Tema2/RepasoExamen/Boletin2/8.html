@@ -1,0 +1,40 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <script>
+        class Album {
+            constructor(nome, autor, cancións, dataLanzamento) {
+                this.nome = nome;
+                this.autor = autor;
+                this.cancions = cancións;
+                this.dataLanzamento = dataLanzamento;
+            }
+            verInfo() {
+                document.write(this.nome + " " + this.autor + " " + this.cancions +
+                    " " + this.dataLanzamento + "<br>")
+            }
+        }
+
+        function crearAlbum() {
+            const nome = prompt('Introduce o nome do álbum:');
+            const autor = prompt('Introduce o autor do álbum:');
+            const cancions = prompt("Introduce as cancións do álbum separadas por comas");
+            const dataLanzamento = prompt('Introduce a data de lanzamento do álbum:');
+            return new Album(nome, autor, cancions, dataLanzamento);
+        }
+        
+        var albumes = [];
+        
+        for (let i = 0; i < 3; i++) {
+            const album = crearAlbum();
+            albumes.push(album);
+        }
+
+        for (let i = 0; i < albumes.length(); i++) {
+            albumes[i].verInfo();
+        }
+    </script>
+</body>
+
+</html>

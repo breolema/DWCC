@@ -1,0 +1,42 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <script>
+        class User {
+            username = "";
+            email = "";
+            socialnetId = "";
+            metodorexistro = "";
+            constructor(username, identificador, tipo) {
+                if (tipo == "correo") {
+                    this.username = usernname;
+                    this.email = identificador;
+                    this.metododerexistro = tipo;
+                }
+                else {
+                    this.username = username;
+                    this.socialnetId = identificador;
+                    this.metododerexistro = tipo;
+                }
+            }
+
+                amosarInfo() {
+                    if (this.tipo == "correo") {
+                        document.write(this.username + " " + this.email);
+                    }
+                    else {
+                        document.write(this.username + " " + this.socialnetId);
+                    }
+                }
+            }
+
+                var usuario1 = new User('usuario1', 'usuario1@example.com', correo);
+                var usuario2 = new User('usuario2', '1234567890', redesocial);
+
+                console.log(usuario1.amosarInfo());
+                console.log(usuario2.amosarInfo());
+    </script>
+</body>
+
+</html>

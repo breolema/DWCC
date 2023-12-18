@@ -1,0 +1,33 @@
+<html>
+<title>EXERCICIOS CLASE</title>
+
+<body>
+    <script>
+        
+        class Vehiculo {
+            constructor(modelo, capacidad) {
+                this.modelo = modelo;
+                this.capacidade = capacidade;
+            }
+            imprimeDatos() {
+                return `Modelo: ${this.modelo}, Capacidad: ${this.capacidade}`;
+            }
+        }
+        
+        class Avión extends Vehiculo {
+            constructor(modelo, capacidad, aerolínea) {
+                super(modelo, capacidad);
+                this.aerolínea = aerolínea;
+            }
+            fly() {
+                console.log(`O avión está voando. Compañía aérea: ${this.aerolínea}`);
+            }
+        }
+        
+        const avion = new Avión('Boeing 747', 500, 'Airline XYZ');
+        console.log(avion.imprimeDatos());
+        avion.fly();
+    </script>
+</body>
+
+</html>
