@@ -3,35 +3,30 @@
 
 <body>
     <script>
-        class User {
-            constructor(username, identificador, tipo) {
-                if (tipo == "correo") {
-                    this.username = usernname;
-                    this.email = identificador;
-                    this.metododerexistro = tipo;
-                }
-                else {
-                    this.username = username;
-                    this.socialnetId = identificador;
-                    this.metododerexistro = tipo;
-                }
-            }
+        class User{
+            nome = "";
+            correo = "";
+            socialnetid = "";
 
-                amosarInfo() {
-                    if (this.tipo == "correo") {
-                        document.write(this.username + " " + this.email);
-                    }
-                    else {
-                        document.write(this.username + " " + this.socialnetId);
-                    }
+
+            constructor(nome, correo, socialnetid){
+                if(socialnetid == undefined){
+                    this.nome = nome
+                    this.correo = correo
+                }else if(correo == undefined){
+                    this.nome = nome
+                    this.socialnetid = socialnetid
                 }
             }
+        }
 
-                var usuario1 = new User('usuario1', 'usuario1@example.com', correo);
-                var usuario2 = new User('usuario2', '1234567890', redesocial);
 
-                console.log(usuario1.amosarInfo());
-                console.log(usuario2.amosarInfo());
+        let usuario1 = new User("Breogan", "breo@gmail.com")
+        let usuario2 = new User("Jesus", undefined, "yisuscrist")
+
+
+        document.write(`Usuario1: ${usuario1.nome}. Correo: ${usuario1.correo}<br>`)
+        document.write(`Usuario2: ${usuario2.nome}. Socialnetid: ${usuario2.socialnetid}<br>`)
     </script>
 </body>
 
