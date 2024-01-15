@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>Detectar Pares</title>
+
+<body>
+  <script>
+    /*Dado o obxecto Array de JS, engadirlle mediante patróns unha nova función
+    chamada obterPares() que o que faga sexa imprimir os números pares que esten 
+    dentro dun obxecto do tipo Array
+    
+    Exemplo:
+    Teño o array [1,2,3,4]
+    A funcion obterPares imprime os numeros 2 e 4 por pantalla.
+    
+    Para crear novas funcions sobre obxectos predefinidos da linguaxe
+    utilízase a sintaxe Array.prototype.nomedafuncion=function(){corpo}*/
+
+    var numeros=[1,2,3,4];
+
+    Array.prototype.obterPares=function(){
+      for(let i=0;i<=this.length;i++){
+        if(this[i]%2==0){
+          document.write(this[i] + " es par ");
+        }
+      }
+    }
+
+    numeros.obterPares();
+  </script>
+</body>
+
+</html>

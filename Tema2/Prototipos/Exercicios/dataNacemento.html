@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Data Nacemento</title>
+
+<body>
+  <script>
+    /*Utilizando o obxecto DATE solicita a data de nacemento por teclado e 
+    calcula o numero de días que pasaron dende a data de nacemento 
+    solicitada á actual.*/
+
+    function devolverDias() {
+      let ano = Number(prompt("En que ano nacestes?"));
+      let mes = Number(prompt("En que mes nacestes?"));
+      let dia = Number(prompt("Que dia nacestes?"));
+
+      let fecha = new Date();
+      let fechaNacimiento = new Date(ano, mes - 1, dia);
+
+      var dias = Math.floor((fecha - fechaNacimiento) / (1000 * 60 * 60 * 24));
+      return dias;
+    }
+
+    document.write("Pasaron " + devolverDias() + " dias.")
+
+  </script>
+</body>
+
+</html>
