@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicio Persona</title>
+
+<body>
+    <script>
+        /*Partindo de un objeto json cos siguientes datos:
+        Nombre: Pepe
+        Apellidos: Juan
+        Edad: 33
+        Convertilo a un obxecto de JS.
+        Antes de imprimir, añade mediante patrons unha nova funcion
+        a ese objeto llamada verInfo para imprimir os datos do
+        objeto JSON.
+    
+        A continuación, crea un array para añadir 2 personas nuevas.
+        Será necesario unha nova función engadirDatos(nome, apelido, idade).
+    
+        Finalmente, recorre o array e imprime os datos das persoas
+        da seguinte forma:
+    
+        Persona 1:
+        Imprimes todos os datos da persona1
+    
+        Persona 2:
+        Imprimes todos os datos da persona2*/
+
+        var obxectoPersona = '{"nombre":"Edgar","apellidos":"Alvaro","edad":"33"}';
+        var person = JSON.parse(obxectoPersona);
+
+        person.engadirDatos = function (nombre, apellidos, edad) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.edad = edad;
+        }
+
+        person.verInfo = function () {
+            document.write(this.nombre + "<br>");
+            document.write(this.apellidos + "<br>");
+            document.write(this.edad + "<br>");
+        }
+        person.verInfo();
+
+        
+
+        var personas = [];
+        for (var i = 0; i < 2; i++) {
+            var nuevaPersona = Object.create(person);
+            nombre = prompt("Nombre?");
+            apellidos = prompt("Apellidos?");
+            edad = prompt("Edad?");
+            nuevaPersona.engadirDatos(nombre, apellidos, edad);
+            personas.push(nuevaPersona);
+        }
+
+        for (var i = 0; i < 2; i++) {
+            document.write("<br>Persona: " + (i + 1) + "<br>");
+            personas[i].verInfo();
+        }
+    </script>
+</body>
+
+</html>

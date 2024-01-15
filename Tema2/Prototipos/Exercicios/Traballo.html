@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicio 1</title>
+
+<body>
+    <script>
+        /*Crear un prototipo para almacenar indoformacion sobre traballos realizados
+        por parte dunha empresa de fontanería.
+        Inicialmente:
+        Descripcion do traballo
+        Nº de horas
+        Precio das horas
+        IVA
+        Funcion que calcule o precion final do traballo realizado
+        Crear un traballo con valores solicitados por pantalla
+        Imprimir datos completo do traballo co precio final
+        Engadior un novo atributo para engadir a data de pago
+        Imprimir de novo o resultado*/
+
+        function Traballo(descripcion,n_horas,precio_hora,iva){
+            this.descripcion = descripcion;
+            this.n_horas = n_horas;
+            this.precio_hora = precio_hora;
+            this.iva = iva;
+
+            this.datos = function(){
+                document.write(`Decripcion: ${this.descripcion}<br>`);
+                document.write(`Numero de horas: ${this.n_horas}<br>`);
+                document.write(`Precio da hora: ${this.precio_hora}<br>`);
+                document.write(`IVA: ${this.iva}<br>`);
+            }
+
+            this.precio_traballo = function(){
+                precioTraballoSiniVA=this.n_horas*this.precio_hora;
+                precioTraballo=precioTraballoSiniVA*0.21;
+                precioTraballoFinal=precioTraballoSiniVA+precioTraballo;
+                document.write(`O precio final do traballo é ${precioTraballoFinal}`);
+
+            }
+        }
+
+        /*const descripcion = prompt('Descripcion traballo');
+        const n_horas = prompt('Numero de horas');
+        const precio_hora = prompt('Precio da hora');
+        const iva = prompt('IVA');
+
+        let traballo1 = new Traballo(descripcion,n_horas,precio_hora,iva);*/
+        let traballo1 = new Traballo("Obra",15,8,21);
+        traballo1.datos();
+
+        Traballo.prototype.data_pago = new Date().toDateString();
+
+
+        Traballo.prototype.verDataPago = function(){
+            document.write(`Data Pago: ${this.data_pago}<br>`);
+        }
+        document.write("---------------------------------------------------<br>");
+        traballo1.datos();
+        traballo1.verDataPago();
+    </script>
+</body>
+
+</html>
