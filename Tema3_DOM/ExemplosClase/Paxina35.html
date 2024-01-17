@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <button id="boton01">Registrar hora </button>
+    <div id="div01">--</div>
+    <script>
+        'use strict'
+        function manej_boton01(event) {
+            let div01 = document.querySelector("#div01");
+            let fecha = new Date();
+            let parrafo = document.createElement("p");
+            parrafo.textContent = fecha;
+            div01.append(parrafo);
+        }
+        let boton01 = document.querySelector("#boton01");
+        boton01.addEventListener("click", manej_boton01);
+    </script>
+</body>
+
+</html>

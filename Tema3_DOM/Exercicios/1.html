@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <!--Crear un bototn de pulsacions. Debemos de levar conta do numero
+    de clicks realizados sobre un boton. Cando chegue a 10 ponse o fondo rojo-->
+    <p id="texto"></p>
+    <button id="boton01">DAME DUROOO MAMIIIIIIIIIIII</button>
+    <script>
+        'use strict'
+        var boton = document.querySelector("#boton01");
+        let texto = document.querySelector("#texto");
+        var contador = 0;
+        boton.addEventListener("click", manej_boton01);
+
+        function manej_boton01() {
+            if (contador < 10) {
+                contador++;
+                texto.textContent = contador;
+                if (contador == 10) {
+                    document.querySelector("#texto").style.color = "red";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

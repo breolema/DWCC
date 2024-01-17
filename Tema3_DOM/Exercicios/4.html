@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <table border="1" id=tabla_horas>
+        <tr>
+            <th>Hora del clic</th>
+        </tr>
+    </table>
+    <button id="boton01">Registrar hora </button>
+    <script>
+        'use strict'
+        function manej_boton01(event) {
+            let tabla_horas = document.querySelector("#tabla_horas");
+            let tr = document.createElement("tr");
+            let td = document.createElement("td");
+            let fecha = new Date();
+            td.append(fecha);
+            tr.append(td);
+            tabla_horas.append(tr);
+        }
+        let boton01 = document.querySelector("#boton01");
+        boton01.addEventListener("click", manej_boton01);
+    </script>
+
+</body>
+
+</html>
