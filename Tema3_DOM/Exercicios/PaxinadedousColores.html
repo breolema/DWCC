@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .div1 {
+        width: 50%;
+        height: 100vh;
+        background-color: red;
+    }
+
+    .div2 {
+        width: 50%;
+        height: 100vh;
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <!--CREAR UNHA PÁXINA WEB QUE CONTEÑA DÚAS AREAS COLOREADAS
+        DE VERMELLO E AZUL.
+        CANDO COLOQUEMOS O RATO DENTRO DA ÁREA VERMELLA, NA ÁREA
+        AZUL APARECERÁ UN TEXTO DE COR BRANCO QUE POÑA,
+        RATO ENRIBA DA PRIMEIRA ÁREA E MODIFIQUE O COLOR DA PRIMEIRA
+        ÁREA VERDE
+        CANDO SALGA DA AREA VOLVA O ORIXINAL-->
+
+    <p id="texto"></p>
+    <div class="container">
+        <div class="div1" id="div1" onmouseover="color()" onmouseout="reset()"></div>
+        <div class="div2" id="div2"></div>
+    </div>
+    <script>
+        'use strict'
+        function color() {
+            rojo.style.background = "green";
+            azul.style.color = "white";
+            azul.textContent = "raton por encima";
+        }
+
+
+        function reset() {
+            rojo.style.background = "red";
+            azul.textContent = "";
+        }
+
+
+        let rojo = document.querySelector("#div1");
+        let azul = document.querySelector("#div2");
+
+        rojo.addEventListener("mouseover", colorRojo);
+        rojo.addEventListener("mouseout", reset);
+
+    </script>
+</body>
+
+</html>

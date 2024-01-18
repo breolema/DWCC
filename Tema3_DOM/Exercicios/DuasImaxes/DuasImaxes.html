@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .div1 {
+        width: 50%;
+        height: 100vh;
+    }
+
+    .div2 {
+        width: 50%;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <!--CREAR UNHA PÁXINA WEB QUE TEÑA DÚAS ÁREAS, UNHA IMAXE EN CADA
+        ÁREA. CANDO COLOCO O RATO ENRIBA DA PRIMEIRA INTERCÁMBIANSE
+        AS IMAXES-->
+
+    <p id="texto"></p>
+    <div class="container">
+        <div class="div1" id="div1"><img src="depor.jpg" id="foto1" width="50%"></div>
+        <div class="div2" id="div2"><img src="lucas.jpg" id="foto2" width="50%"></div>
+    </div>
+    <script>
+        'use strict'
+        function cambiar(){
+            let foto1=document.querySelector("#foto1");
+            let foto2=document.querySelector("#foto2");
+            foto1.src="lucas.jpg";
+            foto2.src="depor.jpg";
+        }
+
+        function reset(){
+            foto1.src="depor.jpg";
+            foto2.src="lucas.jpg";
+        }
+
+        let rojo = document.querySelector("#div1");
+        let azul = document.querySelector("#div2");
+
+        rojo.addEventListener("mouseover", cambiar);
+        rojo.addEventListener("mouseout", reset);
+
+    </script>
+</body>
+
+</html>

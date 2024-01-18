@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <!-- Crea unha páxina que engada nunha lista ordenada, númreos da seguinte
+    forma ao pulsar un boton "Incrementar Lista"
+    1. 1
+    2. 2
+    3. 3-->
+    <button id="boton01">Incrementar Lista</button>
+    <ol id=lista>
+    </ol>
+</body>
+<script>
+    var contador = 0;
+    var boton = document.querySelector("#boton01");
+
+    function manej_boton() {
+        let lista = document.querySelector("#lista");
+        let li=document.createElement("li");
+        contador++;
+        li.append(contador);
+        lista.append(li);
+    }
+
+    boton.addEventListener("click", manej_boton);
+
+</script>
+</body>
+
+</html>
