@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicio 1</title>
+
+<body>
+    <script>
+        /*Crea expresións regulares para:
+        1.Recibir exclusivamente números do 0 o 4
+        2. Recibir exclusivamente cadeas que comecen por maiuscula
+        3. Recibir exclusivamente cadeas que rematen por "dw"
+        4. Impedir que reciban numeros que conteñan 0
+        5. Validacion DNI
+        6. Validacion CIF
+        7. Codigo postal
+        8. Prohibidos numeros
+        9. Email
+        10. Direccion internet*/
+
+        let erObjeto1=new RegExp('^[0-4]$');
+        let er1=/^[0-4]$/;
+
+        let erObjeto2=new RegExp('^[A-Z]');
+        let er2=/^[A-Z]/;
+
+        let erObjeto3=new RegExp('dw$');
+        let er3=/dw$/;
+
+        let erObjeto4=new RegExp('^[0]*');
+        let er4=/[^0]* /;
+
+        let DNI =/^[0-9]{8}[A-Z]{1}$/i;
+        console.log(DNI.test("69874569O"));
+
+        let CIF =/^[A-Z]{1}[0-9]{8}$/;
+        console.log(CIF.test("O98745698"));
+
+        let cp =/^[0-9]{5}$/;
+        console.log(cp.test("15270"));
+
+        let er8=/^[^0-9]*$/;
+        console.log(er8.test("sfaf"));
+
+        let email=/^[a-z0-9_.]+@[a-z0-9.]+\.[a-z]{2,4}$/i;
+
+        let direccionInternet=/^http(s)?:\/\/(www\.)?[a-zA-Z0-9.-]+[\.a-z]{2,4}$/
+        let direccion=prompt("Escribe una direccion de internet");
+        console.log(direccionInternet.test(direccion));
+    </script>
+</body>
+
+</html>

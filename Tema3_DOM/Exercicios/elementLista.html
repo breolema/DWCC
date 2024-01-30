@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Exercicios Repaso</title>
+
+<body>
+    <!-- Crea unha páxina que engada nunha lista ordenada, númreos da seguinte
+    forma ao pulsar un boton "Incrementar Lista"
+    1. 1
+    2. 2
+    3. 3
+    Ahora teremos un segundo boton que elimine elementos da lista cada vez que o 
+    pulsemos
+    Insertar un elemento solicitado por teclado o usuario.
+    Visualizar o numero dos elementos da lista-->
+
+    <button id="boton01">Incrementar Lista</button>
+    <button id="boton02">Diminuir Lista</button>
+    <button id="boton03">Añadir con Prompt</button>
+    <p id="contadorElem"></p>
+    <ol id=lista>
+    </ol>
+
+</body>
+<script>
+    var contador = 0;
+    var boton01 = document.querySelector("#boton01");
+    var boton02 = document.querySelector("#boton02");
+    var boton03 = document.querySelector("#boton03");
+    var contadorElem = document.querySelector("#contadorElem");
+    let lista = document.querySelector("#lista");
+
+    function añadir() {
+        let li = document.createElement("li");
+        contador++;
+        li.textContent = contador;
+        lista.append(li);
+        contadorElem.textContent = contador;
+    }
+
+    function borrar() {
+        let listaT = document.querySelectorAll("ol li");
+
+        if (listaT.length > 0) {
+            let ultimoElemento = listaT[listaT.length - 1];
+            ultimoElemento.remove();
+        }
+        contador--;
+        if (contador >= 0) {
+            contadorElem.textContent = contador;
+        } else {
+            contador = 0;
+        }
+    }
+
+    function añadirPrompt() {
+        let li = document.createElement("li");
+        contador++;
+        li.textContent = prompt("Añade un elemento?");
+        lista.append(li);
+        lista.append(novoElemento);
+    }
+
+
+    boton01.addEventListener("click", añadir);
+    boton02.addEventListener("click", borrar);
+    boton03.addEventListener("click", añadirPrompt);
+
+</script>
+</body>
+
+</html>

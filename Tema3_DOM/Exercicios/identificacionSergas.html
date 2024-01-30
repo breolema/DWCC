@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px gray;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+
+        input[type="checkbox"]+label {
+            margin-left: 10px;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: green;
+        }
+
+        .error {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: red;
+        }
+
+        .disabled {
+            background-color: #f2f2f2;
+            cursor: not-allowed;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <!--ENTRAR EN:
+https://cita.sergas.gal/citainternet/configuracion/pacientes/registroPaciente.jsf?windowId=151
+Crear o formulario existente que rexistre ao paciente si:
+Está correcto o dni.
+Está presente o primeiro apelido.
+Hay data de nacemento.
+En caso correcto, imprimir nun div os datos introducidos.
+No caso de que non esté correcto: avisar de que elemento do formulario non está
+correcto.
+MELLORA:
+Deshabilitar os campos ata que se vaian introducindo correctamente os valores
+de cada un deles. De igual forma, se todo está correcto, imprimir nun div os
+valores do formulario.  -->
+
+    <form action="/identificacionSergas.html" id=formulario01>
+        <fieldset>
+            <legend>DATOS DE IDENTIFICACIÓN</legend>
+            <label for="identificationType">
+                DNI/NIF/NIE <br>
+            </label>
+            <label for="dni">Número Documento:</label><br>
+            <input type="text" id="dni" name="dni"><br>
+            <label for="primerApellido">Primeiro Apelido:</label><br>
+            <input type="text" id="primerApellido" name="primerApellido"><br>
+            <label for="nacimiento">Data Nacemento:</label><br>
+            <input type="date" id="nacimiento" name="nacimiento"><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Rexistrar">
+    </form>
+
+    <div id="informacion" class="feedback"></div>
+
+    <script>
+        var form = document.getElementById("formulario01");
+        var dniInput = document.getElementById("dni");
+        var primerApellidoInput = document.getElementById("primerApellido");
+        var nacimientoInput = document.getElementById("nacimiento");
+        var informacion = document.getElementById("informacion");
+        var botonRegistrar = document.getElementById("botonRegistrar");
+
+        function manej01(event) {
+            let dni = document.querySelector("#dni");
+            let DNI = /^[0-9]{8}[A-Z]{1}$/i;
+            console.log(DNI.test(dni.value));
+        };
+
+        let formulario01 = document.querySelector("#formulario01");
+        formulario01.addEventListener("change", manej01);
+    </script>
+
+</body>
+
+</html>

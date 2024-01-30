@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/FormPaxina73.html" id=formulario01>
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="usuario">
+    </form>
+    <script>
+        function manej01(event) {
+            let usuario = document.querySelector("#usuario");
+            console.log(usuario.value);
+        };
+        let formulario01 = document.querySelector("#formulario01");
+        formulario01.addEventListener("change", manej01);
+    </script>
+
+</body>
+
+</html>

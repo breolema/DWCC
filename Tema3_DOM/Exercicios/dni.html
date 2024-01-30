@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercicios Repaso</title>
+</head>
+
+<body>
+    <!-- Crea unha paxina que reciba un texto que debe ser concordante cunha 
+        expresion regular para un dni. se o dni introducido foi correcto, unha vez 
+        se pulsou validar, habera un panel abaixo (rexion) que se poña azul e 
+        poña DNI correcto, no caso de que sea incorrecto, a rexion porase en 
+        vermello co texto visible DNI incorrecto-->
+
+        <form action="/dni.html" id=formulario01>
+            <label for="dni">DNI</label>
+            <input type="text" name="dni" id="dni">
+        </form>
+
+    <script>
+      function manej01(event) {
+            let dni = document.querySelector("#dni");
+            let DNI =/^[0-9]{8}[A-Z]{1}$/i;
+            console.log(DNI.test(dni.value));
+        };
+
+        let formulario01 = document.querySelector("#formulario01");
+        formulario01.addEventListener("change", manej01);
+    </script>
+</body>
+
+</html>
