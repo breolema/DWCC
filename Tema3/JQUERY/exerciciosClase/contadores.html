@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //CONTADORES 
+        var temp1 = setTimeout(() => alert("Hola"), 5000);
+        //clearTimeout(temp1);
+
+        //INTERVALO.
+        var contador = 0;
+        var temp2 = setInterval(function () {
+            alert("Hola");
+            contador++;
+            if (contador >= 3) clearInterval(temp2);
+        }, 5000);
+    </script>
+</body>
+
+</html>
