@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <table id="idTabla">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <p id="idParrafo">Hola Ángel, como te va la vida?</p>
+
+    <img src="deedpool.jpeg" alt="deedpool">
+
+    <h2>Manolo<p>Manolo</p>
+    </h2>
+
+    <script>
+        $("#idTabla th").css('background', '#ddd');
+
+        $("#idParrafo").css('color', 'green');
+
+        $("img").css('border', '10px solid black');
+        $("img").css({ 'border': '10px solid black', 'width': '10%' });
+
+        $("h2 p").css('color', 'blue');
+
+        $('img').click(function (event) {
+            $("img").css('width', '40%' );
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
