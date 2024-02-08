@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            display: block;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--Ocultar un elemento do DOM (por exemplo un div) cando se pulse
+    click sobre el-->
+
+    <div id='box'></div>
+
+    <script>
+        $("#box").click(function () {
+            $(this).hide();
+        });
+    </script>
+</body>
+</html>

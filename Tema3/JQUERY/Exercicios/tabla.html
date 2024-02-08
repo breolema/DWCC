@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<body>
+    <!---->
+
+    <table border="1" id="tabla">
+        <tr>
+            <th>TABOA JQUERY</th>
+        </tr>
+    </table>
+    <input id="boton" type="button" name="insertar" value="insertar">
+</body>
+
+<script>
+    $("#boton").click(function () {
+        $("#tabla").append("<tr><td>Manolo</td></tr>");
+    });
+
+</script>
+</html>

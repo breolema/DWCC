@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            display: block;
+            border-radius: 5px;
+        }
+
+        #imagen{
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id='box'></div>
+
+    <img id="imagen" src="deedpool.jpeg">
+    <script>
+        $("#box").hover(
+            function () {
+                $(this).animate({ 'width': "300px", "height": "300px" });
+            },
+            function () {
+                $(this).animate({ 'width': "200px", "height": "200px" });
+            }
+        );
+
+        $("#imagen").hover(
+            function () {
+                $(this).animate({ 'width': "300px", "height": "300px",'opacity':"0.5" });
+            },
+            function () {
+                $(this).animate({ 'width': "200px", "height": "200px" ,'opacity':"1" });
+            }
+        )
+
+    </script>
+</body>
+
+</html>

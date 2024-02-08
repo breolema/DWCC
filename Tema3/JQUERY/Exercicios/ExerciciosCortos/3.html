@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            display: block;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Voltar a amosar un elemento oculto-->
+    <div id='box'></div>
+    <input id="boton1" type="button" name="ver" value="ver">
+    <input id="boton2" type="button" name="ocultar" value="ocultar">
+
+
+    <script>
+        $("#boton1").click(function () {
+            $("#box").show();
+        });
+
+        $("#boton2").click(function () {
+            $("#box").hide();
+        });
+
+    </script>
+</body>
+
+</html>

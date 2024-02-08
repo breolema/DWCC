@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--Executar unha funcion cando se faga click nun elemento que amose
+    a data actual do sistema-->
+
+    <p id="parrafo"></p>
+    <input id="boton" type="button" name="insertar" value="Ver fecha">
+    <script>
+        $("#boton").click(function () {
+            $("#parrafo").text(Date());
+        });
+    </script>
+</body>
+</html>

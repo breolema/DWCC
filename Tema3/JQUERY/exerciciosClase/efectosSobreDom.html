@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<style>
+    #box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            display: block;
+            border-radius: 5px;
+        }
+</style>
+<body>
+    <div id='box'></div>
+    <script>
+        $("#box").hover(
+            function () {
+                $(this).animate({ 'width': "300px", "height": "300px" });
+            },
+            function () {
+                $(this).animate({ 'width': "200px", "height": "200px" });
+            }
+        );
+        
+        //insertar algo antes de algo
+        $('<p>Test1</p>').insertBefore('#box');
+        $('#box').before('<p>Test2</p>');
+
+        //insertar algo despois de algo
+        $('<p>Test3</p>').insertAfter('#box');
+        $('#box').after('<p>Test4</p>'); //apareceria antes o 4 que o 3 xa que na sentencia 
+                                                                    //pides que sea xustamente despois deste caso da caixa
+
+        //dentro da caixa
+        $('#box').append('<p>Test dentro</p>');
+        $('<p>Test dentro 2</p>').appendTo('#box');
+
+        //carga lenta e progresiva
+        $('#box').fadeIn('slow');
+
+        //mostra elemento
+        $('#box').show();
+        //esconde o elemento
+        //$('#box').hide();
+
+
+    </script>
+</body>
+</html>

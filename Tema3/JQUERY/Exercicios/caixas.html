@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            display: block;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Crear unha caixa de cor azul que poidamos ampliar ao doble das súas dimensións ao pulsar click sobre ela.
+    Debaixo dela teremos un input text, para recoller un texto e insertalo dentro desa caixa.
+    Podemos ter un boton insertar texto, que cando se pulse colla o texto do input e o meta na caixa azul-->
+        
+    <form id=formulario>
+        <input id="texto" type="text" name="algo">
+        <input id="boton" type="button" name="insertar" value="insertar">
+    </form>
+
+    <div id='box'></div>
+
+    <script>
+
+        $("#box").click(function () {
+                $(this).animate({ 'width': "200px", "height": "200px" });
+        });
+
+        function insertar(){
+            let div = document.querySelector("#box");
+            var texto = $("#texto").val();
+            $("#box").append("<p>" + texto + "</p>");
+        };
+
+
+        let boton = document.querySelector("#boton");
+        boton.addEventListener("click", insertar);
+    </script>
+</body>
+
+</html>

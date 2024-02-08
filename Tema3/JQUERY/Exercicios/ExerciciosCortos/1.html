@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Cambiar o elemento dun párrafo por outro (partimos de un texto inicial)-->
+
+    <p id="parrafo">Hola angel, que tal?</p>
+    <input id="boton" type="button" name="insertar" value="insertar">
+    <script>
+        $("#boton").click(function () {
+            $("#parrafo").text('Mal');
+        });
+    </script>
+</body>
+
+</html>

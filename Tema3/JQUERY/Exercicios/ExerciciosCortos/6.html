@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Obter o valor dun input e imprimir o dobre do número recibido-->
+    <div class="numero">
+        <input type="number" name="num" id="numero">
+        <input type="submit" value="Doble del numero" id="sumbit">
+    </div>
+
+    <script>
+        $('#sumbit').on("click", function () {
+            var num = $("#numero").val();
+            var resultado = num * 2;
+            $(".numero").append("<p>Doble: " + resultado + "</p>")
+        })
+    </script>
+</body>
+
+</html>
