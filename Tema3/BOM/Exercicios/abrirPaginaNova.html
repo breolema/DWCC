@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Utilizando intervalos cada 5 segundos abrir unha paxina web nunha
+    ventana nova. Só debe abrir 10 ventas a partir de ahí eliminamos
+    o intervalo-->
+    <script>
+        let contador = 0;
+        let intervalo = setInterval(function () {
+            let nuevaVentana = window.open('https://www.google.es', '_blank');
+            contador++;
+
+            if (contador >= 10) {
+                clearInterval(intervalo);
+            }
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>

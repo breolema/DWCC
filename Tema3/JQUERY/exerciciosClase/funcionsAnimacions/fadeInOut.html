@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <div>
+        <button id="boton">Desaparecer</button> <br>
+        <img src="deedpool.jpeg" alt="deedpool" id="imagen">
+    </div>
+
+
+    <script>
+
+        $("#boton").click(
+            function () {
+                for (let i=0;i<101;i++) {
+                    $("#imagen").fadeOut(),
+                    $("#imagen").fadeIn();
+                }
+            }
+        )
+
+
+
+    </script>
+
+</body>
+
+</html>

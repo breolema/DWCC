@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<body>
+    <script>
+        let contador = 0;
+        let intervalo = setInterval(function () {
+            $("body").append("<p>Tres tristes tigres comen trigo en un trigal</p>");
+            contador++;
+
+            if (contador >= 10) {
+                clearInterval(intervalo);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

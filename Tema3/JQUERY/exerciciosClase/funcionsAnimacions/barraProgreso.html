@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <style>
+        #borde {
+            width: 500px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        #barra {
+            width: 0%;
+            height: 50px;
+            background-color: rgb(59, 221, 38);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="borde">
+        <div id="barra"></div>
+    </div>
+    <input id="aparece" type="button" value="Descargar">
+
+
+    <script>
+        $("#aparece").click(function () {
+            $("#barra").animate({
+                width: "+=500"
+            }, 5000)
+        });
+    </script>
+
+</body>
+
+</html>
