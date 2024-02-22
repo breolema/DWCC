@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Partimos du obxecto JSON coa seguinte estrutura: (Referencia, exercicio plantuka).
+        EMPRESA.
+        Nome: Amoso S.L
+        CIF: G15133648
+        Direccion: “Rúa Areal, 24. 15150. A Coruña”.
+        Teléfono: 9817385444
+    Converte este obxecto JSON a un obxecto Javascript e imprime os datos en un div que se verá con
+    efecto fadeIn cando remate o proceso de impresión. -->
+
+    <div id="resultado"></div>
+
+    <script>
+        var empresas = '{"nome":"Amoso S.L", "cif":"G15133648", "direccion":"Rúa Areal, 24. 15150. A Coruña", "telefono":"9817385444"}';
+        var empresuka = JSON.parse(empresas);
+
+        empresuka.gravarDatos = function (nome, cif,direccion,telefono) {
+            this.nome = nome;
+            this.cif = cif;
+            this.direccion = direccion;
+            this.telefono = telefono;
+        }
+
+        empresuka.verDatos = function () {
+            document.write(this.nome + "<br>");
+            document.write(this.cif + "<br>");
+            document.write(this.direccion + "<br>");
+            document.write(this.telefono + "<br>");
+        }
+
+        $("#resultado").fadeIn(empresuka.verDatos());
+        
+    </script>
+</body>
+
+</html>

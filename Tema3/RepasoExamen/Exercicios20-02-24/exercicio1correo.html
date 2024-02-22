@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <style>
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--Dada unha caixa de texto (input) onde se pode escribir calquera texto, validar a entrada
+do mesmo como un correo electrónico válido. Faino tendo un botón que será un div que
+ao pulsar sobre el nos indique se o que hai na caixa de correo é correcto ou non. Debe
+indicalo noutro div.
+Agora fai o mesmo pero a expresión regular será para validar contrasinais que deben ter 8
+caracteres, unha letra maiúscula, unha letra minúscula, un número e polo menos un
+carácter especial destes.
+Crea unha páxina web que permita que cando se pulse un botón, despois de pasar 5
+segundos apareza un div en pantalla co nome CONTRA ATRÁS FINALIZADA, debe
+aparecer con efecto fadeIn. -->
+<input type="text" id="correo">
+<div id='botonEmail'>
+    <img src="iconoBoton.png" alt="iconoBoton">
+</div>
+
+<div id="resultado"></div>
+
+<script>
+    $("#botonEmail").click(function () {
+        let erObjeto1=/^[a-z0-9_.]+@[a-z0-9.]+\.[a-z]{2,4}$/i;
+        let correo = document.querySelector("#correo");
+
+        if (erObjeto1.test(correo.value)) {
+                $("#resultado").text("Correo electrónico válido");
+            } else {
+                $("#resultado").text("Correo electrónico inválido");
+            }
+    });
+</script>
+</body>
+</html>

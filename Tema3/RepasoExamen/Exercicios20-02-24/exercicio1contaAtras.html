@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <style>
+        img{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!--Crea unha páxina web que permita que cando se pulse un botón, despois de pasar 5
+    segundos apareza un div en pantalla co nome CONTRA ATRÁS FINALIZADA, debe
+    aparecer con efecto fadeIn. -->
+
+    <div id='boton'>
+        <img src="iconoBoton.png" alt="iconoBoton">
+    </div>
+
+    <div id="resultado"></div>
+    <script>
+            $("#boton").click(function() {
+                setTimeout(function() {
+                    $("#resultado").append("<h2>CONTRA ATRÁS FINALIZADA</h2>").fadeIn();
+                }, 5000); 
+            });
+    </script>
+</body>
+</html>

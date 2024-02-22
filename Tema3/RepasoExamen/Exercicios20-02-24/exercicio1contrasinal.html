@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <style>
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--Agora fai o mesmo pero a expresión regular será para validar contrasinais 
+        que deben ter 8 caracteres, unha letra maiúscula, unha letra minúscula, un 
+        número e polo menos un carácter especial destes ¿?#,;. -->
+
+        <input type="text" id="contrasinal">
+<div id='botonContrasinal'>
+    <img src="iconoBoton.png" alt="iconoBoton">
+</div>
+
+<div id="resultado"></div>
+
+<script>
+    $("#botonContrasinal").click(function () {
+        let erObjeto1=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\?).{8,}$/;
+        let contrasinal = document.querySelector("#contrasinal");
+
+        if (erObjeto1.test(contrasinal.value)) {
+                $("#resultado").text("Contrasinal válido");
+            } else {
+                $("#resultado").text("Contrasinal inválido");
+            }
+    });
+</script>
+</body>
+</html>

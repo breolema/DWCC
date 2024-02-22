@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--Crea un array de empresas con 2 empresas (Referencia, exercicio plantuka). 
+        Imprime os datos de cada empresa con un div distinto con efecto div-->
+    <script>
+
+var empresas = '{"nome":"ServicioMovil", "tipo":"software"}';
+var empresuka = JSON.parse(empresas);
+
+empresuka.gravarDatos = function (nome, tipo) {
+      this.nome = nome;
+      this.tipo = tipo;
+    }
+
+    empresuka.verDatos = function () {
+      document.write(this.nome + "<br>");
+      document.write(this.tipo + "<br>");
+    }
+
+    empresuka.verDatos();
+
+var empresa1 =  [];
+for (var i = 0; i < 2; i++) {
+      var nuevaEmpresa = Object.create(empresuka);
+      nome = prompt("introduce o nome da empresa");
+      tipo = prompt("introduce o tipo de empresa que é");
+      nuevaEmpresa.gravarDatos(nome, tipo);
+      empresa1.push(nuevaEmpresa);
+    }
+
+    for (var i = 0; i < 2; i++) {
+      document.write("Empresa: " + i + "<br>");
+      empresa1[i].verDatos();
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <input id="novaVenta" type="button" value="Abrir nova venta"> <br>
+
+    <form id=abrirPaxina>
+        <input id="ruta" type="text" name="algo">
+        <input id="boton" type="button" value="Abrir páxina">
+    </form><br>
+
+    <input id="recargar" type="button" value="Recargar páxina"> <br>
+
+    <script>
+        $("#novaVenta").click(function () {
+            let nuevaVentana = window.open('https://www.google.es', '_blank');
+        });
+
+        $("#boton").click(function() {
+            var ruta = document.querySelector("#ruta");
+            window.location.href = ruta.value;
+        });
+
+            $('#recargar').click(function () {
+                window.location.reload();
+            });
+    </script>
+</body>
+
+</html>
