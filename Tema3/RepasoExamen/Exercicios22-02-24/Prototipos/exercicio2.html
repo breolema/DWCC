@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <style>
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--2. Engade unha función ao obxecto String que devolva unha cadea ao revés de como se lle pasou. A
+cadea debe ser introducida mediante un cadro te texto input. Executarase a acción unha vez se pulse
+sobre un botón (imaxe). -->
+
+<form id=cadeaReves>
+    <input id="cadena" type="text" name="algo">
+    <div id='botonAccion'>
+        <img src="iconoBoton.png" alt="iconoBoton">
+    </div>
+</form>
+
+<div id="resultado"></div>
+
+<script>
+    $("#botonAccion").click(function () {
+        let cadena = document.querySelector("#cadena").value;
+        let cadenaInvertida = "";
+        for (let i = cadena.length - 1; i >= 0; i--) {
+            cadenaInvertida += cadena[i];
+        }
+        $("#resultado").text(cadenaInvertida);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Document</title>
+   <script type='text/javascript' src='../../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--1. Engade unha función ao obxecto Array que obteña todos os números impares do 0 ao 100. 
+        Carga todos os números impartes nun div que será amosado unha vez pasen cinco segundos. -->
+<div id="resultado"></div>
+    <script>
+        let numerosImpares = [];
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 !== 0) {
+                numerosImpares.push(i);
+            }
+        }
+        setTimeout( function() {
+            for(let i=0;i<=numerosImpares.length;i++){
+                $("#resultado").append(numerosImpares[i] + ",");
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--1. Unha empresa utiliza unha referencia para os seus produtos co seguinte formato F-1234-A
+Sempre unha letra maiúscula de A-Z, un “-”, catro números seguidos do 0 ao 9, outro “-” e,
+finalmente, unha letra maiúscula do A-Z.
+Valida esta expresión regular facendo aparecer unha imaxe coa mensaxe “correcto”, se valida a
+expresión ou unha imaxe que sexa “incorrecto” se non valida a expresión. -->
+<form id=formulario01>
+    <input type="text" name="referencia" id="referencia"/>
+    <input type="button" id="botonAccion" value="Comprobar referencia">
+</form>
+
+<div id="resultado"></div>
+
+    <script>
+        $("#botonAccion").click(function () {
+            let erObjeto1=/^[A-Z]{1}-[0-9]{4}-[A-Z]{1}/;
+            let referencia = document.querySelector("#referencia");
+
+        if (erObjeto1.test(referencia.value)) {
+                $("#resultado").html("<img src='correcto.jpg' alt='tick'>");
+            } else {
+                $("#resultado").html("<img src='incorrecto.png' alt='tick'>");
+            }
+        });
+    </script>
+</body>
+</html>
