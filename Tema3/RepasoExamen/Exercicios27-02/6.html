@@ -20,9 +20,15 @@
     
             $("#boton").click(function () {
                 if (vese) {
-                    $("#resultado2").toggle("slow");
-                    $("#resultado4").toggle("slow");
-                } 
+                    $("#resultado2").animate({ opacity: 0 }, 1000);
+                    $("#resultado4").animate({ opacity: 0 }, 1000);
+                    vese=false;
+                } else {
+                    $("#resultado2").animate({ opacity: 100 }, 1000);
+                    $("#resultado4").animate({ opacity: 100 }, 1000);
+                    vese=true;
+                }
+               
             });
         </script>
 </body>
