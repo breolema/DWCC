@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Crear una web que cree una lista de tareas.
+        El boton + añade tareas que podremos incluír en un input.
+        Una vez añadidas, pasan a una lista <ul>. Cada tarea tendrá un
+        botón quitar y que sacará la tarea de la lista.
+        En el borrado, debemos usar un efecto fadeOut o animate.-->
+    <div>
+        <input type="text" name="tarefa" id="tarefa">
+        <button id="boton01">+</button>
+    </div>
+    <ol id=lista>
+    </ol>
+
+    <script>
+        var contador = 0;
+        var boton = document.querySelector("#boton01");
+
+        function manej_boton() {
+            let li = document.createElement("li");
+            let botonBorrar = document.createElement("button");
+                botonBorrar.textContent = "Borrar";
+                botonBorrar.addEventListener("click", function() {
+                    li.remove().fadeOut("slow");
+                });
+            li.textContent = document.querySelector("#tarefa").value;
+            lista.append(li);
+            li.append(botonBorrar);
+        }
+
+        boton.addEventListener("click", manej_boton);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='jquery-1.7.js'></script>
+    <style>
+        body{
+            margin:0px;
+            background-color: black;
+            height:100vh;
+            width: 100vw;
+        }
+
+        #texto{
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            margin:auto;
+            font-size: 25px;
+        }
+
+        #capturar{
+            height:100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Crea unha páxina web que teña un texto que indique que o pular Alt+F12
+    podemos colocar unha imaxe de fondo. O texto ten que estar centrado na
+    pantalla horizontal e verticalmente. Ao iniciar a pantalla será negra co texto
+    indicado e cando o usuario non pulse tecla, a imaxe se amose-->
+
+    
+    <div id="capturar">
+        <h1 id="texto">PULSA ALT+F12 PARA CAMBIAR O FONDO</h1>
+    </div>
+    <script>
+         $('body').keydown(function (event) {
+            var tecla = event.key;
+            if (event.altKey && tecla === 'F12') {
+                document.querySelector("#capturar").style.backgroundImage="url('deedpool.jpeg')"
+            }
+         });
+
+         
+    </script>
+</body>
+</html>
+
