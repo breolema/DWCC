@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <style>
+        div{
+            display: flex;
+            width: 100%;
+        }
+
+        img{
+            width: 33%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--9. Partimos con tres imaxes enfila, a imaxe pulsada desaparecerá 
+        mediante un efecto tipo slide.-->
+
+    <div>
+        <img src="../atletico.jpg" alt="atletico" id="imagen"> 
+        <img src="../atletico.jpg" alt="atletico" id="imagen2"> 
+        <img src="../atletico.jpg" alt="atletico" id="imagen3"> 
+    </div>
+
+    <script>
+        $("#imagen").click(function () {
+            $("#imagen").slideUp("slow");
+        });
+
+        $("#imagen2").click(function () {
+            $("#imagen2").slideUp("slow");
+        });
+
+        $("#imagen3").click(function () {
+            $("#imagen3").slideUp("slow");
+        });
+    </script>
+</body>
+
+</html>

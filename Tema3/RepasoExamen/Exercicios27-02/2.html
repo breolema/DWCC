@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Continuamos co exercicio anterior: ó facer clic no botón, o parágrafo 
+        debe desaparecer. Pero se volvemos a pulsar, debe aparecer de novo.-->
+
+    <div id="resultado">Este párrafo debe desaparecer </div><input type="button" id="boton" value="Borrar/Aparecer">
+
+    <script>
+        $("#boton").click(function () {
+                $("#resultado").toggle();
+        });
+
+        //outra forma 
+        /*var vese = true;
+        $("#boton").click(function () {
+            if(vese){
+                $("#resultado").fadeOut();
+                vese=false;
+            } else {
+                $("#resultado").fadeOut();
+                vese=true;
+            }
+                
+        });*/
+
+    </script>
+</body>
+
+</html>

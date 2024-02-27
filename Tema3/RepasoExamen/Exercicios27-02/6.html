@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--6. Continua co exercicio anterior. Agora os parágrafos deben desaparecer 
+        lentamente, de forma que vai perder a opacidade. Ó volver pulsar deberán 
+        gañar opacidade á mesma velocidade.-->
+
+        <div id="resultado">Parrafo 1</div>
+        <div id="resultado2">Parrafo 2</div>
+        <div id="resultado3">Parrafo 3</div>
+        <div id="resultado4">Parrafo 4</div>
+        <input type="button" id="boton" value="Borrar/Aparecer">
+        <script>
+            var vese = true;
+    
+            $("#boton").click(function () {
+                if (vese) {
+                    $("#resultado2").toggle("slow");
+                    $("#resultado4").toggle("slow");
+                } 
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 1</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--1. Partindo dun parágrafo calquera, ó facer clic no botón que terá á súa 
+        dereita, o parágrafo debe desaparecer.-->
+
+        <div id="resultado">Este párrafo debe desaparecer </div><input type="button" id="boton" value="Borrar">
+
+        <script>
+            $("#boton").click(
+            function () {
+                    $("#resultado").fadeOut()
+            }
+        )
+        </script>
+</body>
+</html>

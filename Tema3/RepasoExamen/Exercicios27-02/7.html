@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+
+    <style>
+        #imagen{
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--7. Colle unha imaxe calquera que aparece aliñada á esquerda. Ao pasar 5 
+        segundos da carga da páxina debe aparecer no extremo dereito. -->
+    <img src="../atletico.jpg" alt="atletico" id="imagen">
+
+    <script>
+        setTimeout(function () {
+            $("#imagen").css({"float": "right"})
+        }, 5000);
+
+    </script>
+</body>
+
+</html>

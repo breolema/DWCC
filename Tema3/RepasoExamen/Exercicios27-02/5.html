@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--5. Agora con 4 parágrafos. Ó facer clic no botón, os parágrafos pares 
+        deben desaparecer. Pero se volvemos a pulsar, deben aparecer de novo. -->
+
+        <div id="resultado">Parrafo 1</div>
+        <div id="resultado2">Parrafo 2</div>
+        <div id="resultado3">Parrafo 3</div>
+        <div id="resultado4">Parrafo 4</div>
+        <input type="button" id="boton" value="Borrar/Aparecer">
+        <script>   
+            $("#boton").click(function () {
+                    $("#resultado2").toggle();
+                    $("#resultado4").toggle();
+            });
+        </script>
+</body>
+</html>

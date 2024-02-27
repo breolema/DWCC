@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+<body>
+    <!--4. O mesmo que o anterior pero, ó facer clic no botón, o primeiro e o 
+        último parágrafo deben desaparecer (os dous). Pero se volvemos a pulsar, 
+        deben aparecer de novo (os dous). -->
+
+        <div id="resultado">Este párrafo debe desaparecer </div>
+        <div id="resultado2">Este debe desaparecer tamen</div>
+        <input type="button" id="boton" value="Borrar/Aparecer">
+        <script>    
+            $("#boton").click(function () {
+                    $("#resultado").toggle();
+                    $("#resultado2").toggle();
+            });
+        </script>
+</body>
+</html>

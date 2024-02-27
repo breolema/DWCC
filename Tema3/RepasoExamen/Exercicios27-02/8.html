@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <style>
+        #imagen {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--8. Agora programa o exercicio anterior para preparar unha aliñación á esquerda, 
+        centro ou dereita da imaxe. -->
+        <div>
+            <input type="button" value="Esquerda" id="esquerda">
+            <input type="button" value="Centro" id="centro">
+            <input type="button" value="Dereita" id="dereita">
+        </div>
+    <img src="../atletico.jpg" alt="atletico" id="imagen"> <br>
+
+    
+
+    <script>
+        $("#esquerda").click(function () {
+            $("#imagen").css({ "float": "left" })
+        });
+
+        $("#centro").click(function () {
+            $("#imagen").css({ "margin": "0 auto", "float": "none", "display": "block" })
+        });
+
+        $("#dereita").click(function () {
+            $("#imagen").css({ "float": "right" })
+        });
+    </script>
+</body>
+
+</html>
