@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Prepara unha web que simule un contador de 60 segundos en tamaño grande.
+    Ocontador comenzará a contar no momento que se pulse o div que contén 60 seg.
+    acndo chuegue a 0 amosará unha sinal de stop e ao lado outra que se a pulsamois 
+    reiniciará o contador a 60-->
+
+    <div id="contador" style="font-size: 36px; font-weight: bold;">60</div>
+    <img src="stop.png" alt="stop" id="stop">
+    <img src="reiniciar.PNG" alt="reset" id="reset">
+
+    <script>  
+        let contador = 60;
+        let timer;
+    
+    
+        function actualizarContador() {
+      $("#contador").text(contador);
+      contador--;
+    
+    
+      if (contador >= 0) {
+       timer = setTimeout(actualizarContador, 1000);
+      }
+    }
+    
+    
+    $("#contador").click(function() {  
+        actualizarContador()
+    });
+    
+    
+    $("#reset").click(function() {
+        clearTimeout(timer);
+        contador = 60;
+      setTimeout(actualizarContador, 1000);
+      timer = null;
+    });
+    
+    
+    $("#stop").click(function() {  
+        clearTimeout(timer);
+        $("#contador").text(contador);
+        timer = null;
+    });
+    
+    
+    </script>
+</body>
+
+</html>

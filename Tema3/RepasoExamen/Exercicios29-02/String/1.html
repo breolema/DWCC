@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--1. Contar vogais: crea unha función que conte cantas vogais hai 
+        nunha cadea de texto-->
+
+    <script>
+        const cadena = "Cadena para contar vocales";
+
+        String.prototype.contarVocales = function () {
+            let vocales = 0;
+            for (let i = 0; i < this.length; i++) {
+            const char = this[i].toLowerCase();
+                if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+                    vocales++;
+                }
+            }
+            return vocales;
+        }
+
+        document.write(cadena.contarVocales());
+    </script>
+</body>
+
+</html>

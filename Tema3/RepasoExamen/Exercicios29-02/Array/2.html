@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--2. Ordenación personalizada: implementa unha función que ordena unha 
+        matriz de obxectos por unha propiedade específica. Exemplo: números de 
+        maior a menor. -->
+
+    <script>
+        var arrayAsc = [15, 87, 97, 1, 2];
+        Array.prototype.ordenarAscendente = function (arrayAsc) {
+            this.sort(function (a, b) {
+                return a - b;
+            });
+            return this; //devolve  o array ordenado
+        }
+
+        arrayAsc.ordenarAscendente(); //chamada a funcion
+        document.write(`${arrayAsc}<br>`); //enseña o array ordenado
+    </script>
+</body>
+
+</html>

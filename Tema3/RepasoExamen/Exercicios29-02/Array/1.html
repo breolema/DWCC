@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--1. Eliminar duplicados: escribe unha función que tome unha matriz e 
+        devolva unha nova matriz sen elementos duplicados.-->
+
+    <script>
+
+        var numeros = [6,7,8,8,9];
+
+        Array.prototype.eliminarDuplicados = function () {
+            let arrayNovo = [];
+            for (let i = 0; i < this.length; i++) {
+                if (arrayNovo.indexOf(this[i]) === -1) {
+                    arrayNovo.push(this[i]);
+                }
+            }
+            return arrayNovo;
+        }
+
+        document.write(numeros.eliminarDuplicados());
+    </script>
+
+</body>
+
+</html>

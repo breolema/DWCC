@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--2. Cifrado César: escribe unha función que implemente o cifrado César para 
+        unha cadea de texto dada.-->
+
+    <script>
+        let cadena = "Esta cadena es para cifrar";
+
+        String.prototype.cifradoCesar = function () {
+            let clave = 2;
+            do {
+                if (isNaN(Number(clave))) {
+                    alert("Debes introducir un numero");
+                }
+            } while (isNaN(Number(clave)))
+        }
+
+        document.write(cadena.cifradoCesar());
+    </script>
+</body>
+
+</html>
