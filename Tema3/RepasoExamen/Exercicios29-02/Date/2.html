@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--2. É ano bisiesto: crea unha función que determine se un ano 
+        determinado é bisiesto ou non.-->
+
+    <script>
+        let fecha = new Date("2024/02/1");
+
+        Date.prototype.esBisiesto = function(){
+            let ano = this.getFullYear();
+            if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+                return "Es bisiesto";
+            } else {
+                return "No es bisiesto";
+            }
+        }
+
+        document.write(fecha.esBisiesto());
+    </script>
+</body>
+</html>

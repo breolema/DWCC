@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--4. Día da semana: implementa unha función que devolve o día da 
+        semana para unha data determinada.-->
+
+    <script>
+        let fecha = new Date("2024/02/05");
+
+        Date.prototype.obtenerDiaSemana = function () {
+            let diasSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            return diasSemana[this.getDay()];
+        }
+
+        document.write(fecha.obtenerDiaSemana());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--5. Calculadora de idade: crea unha función que calcule a idade 
+        dunha persoa dada a súa data de nacemento.-->
+
+    <script>
+        let fecha = new Date("2002/02/05");
+
+        Date.prototype.calcularEdad = function () {
+            let fechaActual = new Date();
+            let edad = fechaActual.getFullYear() - this.getFullYear();
+
+            if (fechaActual.getMonth() < this.getMonth() || (fechaActual.getMonth() === this.getMonth() && fechaActual.getDate() < this.getDate())) {
+                edad--;
+            }
+
+            return edad;
+        }
+
+       document.write("La edad es: ", fecha.calcularEdad());
+    </script>
+</body>
+</html>

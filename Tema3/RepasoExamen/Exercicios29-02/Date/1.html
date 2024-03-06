@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!--1. Días transcorridos: implementa unha función que calcula cantos 
+    días pasaron entre dúas datas.-->
+
+    <script>
+        let fecha1 = new Date("2024/01/1");
+        let fecha2 = new Date("2024/02/1");
+
+        Date.prototype.calcularDias = function(fecha1,fecha2){
+            let diferencia = Math.abs(fecha1 - fecha2);
+            let dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+            return dias;
+        }
+
+       //let diasTranscorridos = fecha1.calcularDias(fecha1,fecha2);
+       let diasTranscorridos = new Date();
+       document.write("Dias transcorridos: " + diasTranscorridos.calcularDias(fecha1,fecha2));
+    </script>
+</body>
+</html>

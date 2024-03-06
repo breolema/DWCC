@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--3. Formato personalizado: escribe unha función que formatee 
+        unha data determinada nun formato específico.-->
+
+    <script>
+        let fecha = new Date("2024/02/05");
+
+        Date.prototype.formatearFecha = function(){
+            let dia = this.getDate();
+            let mes = this.getMonth() + 1; 
+            let año = this.getFullYear();
+
+            return dia + '/' + mes + '/' + año;
+        }
+
+        document.write(fecha.formatearFecha());
+    </script>
+</body>
+</html>
