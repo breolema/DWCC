@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //definimos un obxecto json
+        let aula = '{"nome":"Radio", "ubicacion":"1º planta", "ocupada":"true","finOcupacion":"2024/03/09"}';
+        //convertimolo nun obxecto JavaScript
+        let auluka = JSON.parse(aula);
+
+        //funcion para gravar os datos que se introduzcan das aulas
+        auluka.gravarDatos = function (nome, ubicacion, ocupada, finOcupacion) {
+            this.nome = nome;
+            this.ubicacion = ubicacion;
+            this.ocupada = ocupada;
+            this.finOcupacion = finOcupacion;
+        }
+
+        //funcion para ensinar os datos das aulas
+        auluka.verDatos = function () {
+            document.write(this.nome + "<br>");
+            document.write(this.ubicacion + "<br>");
+            document.write(this.ocupada + "<br>");
+            document.write(this.finOcupacion + "<br>");
+        }
+        //chamada a funcion veDatos
+        auluka.verDatos();
+
+        //Creamos un array novo
+        var auluka1 = [];
+
+        //co bucle for cargamos no array, neste caso, 2 aulas mais
+        for (let i = 1; i < 3; i++) {
+            var nuevaAula = Object.create(auluka);
+            nome = prompt("Cal é o nome da aula?");
+            ubicacion = prompt("Donde esta ubicada?");
+            ocupada = prompt("Esta ocupada?");
+            finOcupacion = prompt("Cando vai estar libre?");
+            //chamada a funcion gravarDatos
+            nuevaAula.gravarDatos(nome, ubicacion, ocupada, finOcupacion);
+            //añadimos os datos no array
+            auluka1.push(nuevaAula);
+        }
+
+        //ensinamos os datos
+        for (var i = 0; i < 2 ; i++) {
+            document.write("Aula: " + (i+1) + "<br>");
+            auluka1[i].verDatos();
+        }
+    </script>
+</body>
+
+</html>
