@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--1. Escribe unha función que tome dous números como argumentos 
+        e devolva o resultado de dividir o primeiro entre o segundo. Use 
+        un bloque try-catch para tratar o caso de tentar dividir por cero. 
+        (Consultar tipos de erro)-->
+
+    <script>
+        const dividir = (numero1, numero2) => {
+            try {
+                if (numero2 == 0) {
+                    throw new Error("Error de rango: El divisor es 0.");
+                }
+                let resultado = numero1 / numero2;
+                return resultado;
+            } catch (error){
+                return error.message;
+            }
+        }
+
+        document.write(dividir(4,0));
+
+    </script>
+</body>
+
+</html>

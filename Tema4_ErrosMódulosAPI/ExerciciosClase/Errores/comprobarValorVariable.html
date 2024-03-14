@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function comprobarNota(n){
+            if (n < 1 || n > 10) {
+                    throw new RangeError ("o numero non é do 1 o 10");
+                } 
+        }
+
+        try{
+            comprobarNota(21);
+        } catch (error) {
+            if (error instanceof RangeError){
+                console.log(`${error.name}: ${error.message}`);
+                console.log("Por favor, vuelve a introducir un valor para la nota");
+            }
+        }
+    </script>
+</body>
+
+</html>

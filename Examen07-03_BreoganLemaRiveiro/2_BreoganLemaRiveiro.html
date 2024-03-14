@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,14 @@
     <title>Document</title>
     <script type='text/javascript' src='jquery-1.7.js'></script>
 </head>
+
 <body>
 
     <form id=formulario01>
-        <input type="text" name="paxina" id="paxina"/>
-        <input type="button" id="botonAccion" value="Comprobar páxina">
+        <input type="text" name="paxina" id="paxina" />
+        <div id="botonAccion">
+            <img src="imagenes/boton.JPG" alt="img" height="80px">
+        </div>
     </form>
     <div id="error">A direccion non é correcta</div>
 
@@ -25,12 +29,15 @@
             //expresion regular para a páxina
             let erPaxina = /^http(s)?:\/\/(www\.)?[a-zA-Z0-9.-]+[\.a-z]{2,4}$/;
             //metemos o que recibamos do input na variable paxina
-            let paxina = document.querySelector("#paxina");
+            let paxina = $("#paxina").val()
 
             /*comparamos e si este funciona mete o valor na paxina 
             e facemos que siga desaparecido o mensaxxe de erro*/
-            if(erPaxina.test(paxina.value)){
-                $("#resultado").append("<p style='background-color: green; color: white;''>" + paxina.value + "</p>")
+            if (erPaxina.test(paxina)) {
+                let fin_cabecera = paxina.indexOf(".")
+                paxina = paxina.slice(fin_cabecera + 1)
+                paxina.textContent = paxina;
+                $("#resultado").append("<p style='background-color: green; color: white;''>" + paxina + "</p>")
                 $("#error").fadeOut()
             } else {
                 //si non se cumple a expresion regular facemos un fadeIn do mensaxe de erro
@@ -39,4 +46,5 @@
         });
     </script>
 </body>
+
 </html>

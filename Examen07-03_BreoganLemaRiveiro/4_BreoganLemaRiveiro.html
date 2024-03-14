@@ -26,7 +26,7 @@
         setTimeout(function () {
             for (let i = 0; i < 11; i++) {
                 var img = 'imagenes/' + contador + '.jpeg';
-                $("#resultado").append(img);
+                $("#resultado").html(`<img src="${img}" alt="img">`);
 
                 contador++;
             }

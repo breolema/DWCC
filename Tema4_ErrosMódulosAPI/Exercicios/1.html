@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+</head>
+
+<body>
+    <!--Elaborar un programa que nun imput reciba un número entre 1 e 10.
+        Se non esta entre o 1 eo 10, lanzamos un error de tipo  Error coa mensaxe
+    "O numero non é do 1 ao 10". NO catch debe lanzar por consola a mensaxe.-->
+
+    <input type="number" name="numero" id="numero" />
+    <input type="button" value="boton" id="boton">
+
+    <script>
+        document.querySelector("#boton").onclick = () => {
+            try {
+                const numero = document.querySelector("#numero").value;
+                if (numero < 1 || numero > 10) {
+                    throw new Error ("o numero non é do 1 o 10");
+                } else {
+                    console.log("O numero esta dentro")
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    </script>
+</body>
+
+</html>
