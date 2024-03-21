@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Elaborar un programa que pida entre 2 e 10 por un imput e xere un array dese tamaño
+que teña 0 no seu interior. A creacion do array debe ser feita dentro dunha funcion flecha que reciba por
+parametro numero.Se o numero non é 2 ou 10 lanzará un erro de rango que debe ser capturado.
+So ese tipo de erro-->
+    <script>
+        // Función flecha para crear el array
+        const crearArray = (numero) => {
+            if (numero < 2 || numero > 10) {
+                throw new Error("Error de rango: El número debe estar entre 2 y 10.");
+            }
+            // O array tendra ceros utilizando .fill(0)
+            const array = new Array(numero).fill(0);
+            return array;
+        };
+
+
+        // Pedir un número al usuario
+        const numero = parseInt(prompt("Introduce un número entre 2 y 10:"));
+
+
+        try {
+            // Crear el array
+            const miArray = crearArray(numero);
+            console.log(miArray);
+        } catch (error) {
+            console.log(error.message);
+        }
+    </script>
+</body>
+
+</html>

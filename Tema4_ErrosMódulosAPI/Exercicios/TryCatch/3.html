@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Crear dúas funcións flecha. Unha fución na que reciban 2 números por teclado.
+    Teñen que ser números, se non o son lanzarase un erro coa seguinte mensaxe:
+    "Un ou dous parámetros, non son números".
+    En todo caso,teremos que chamar a unha función que converta os parámetros en
+    cadeas (se xa non o eran) e devolva a súa concatenación.
+    Exemplo:
+    2,2 -----< Correcto. Finalmente, 22.
+    a,2 -----< Erro, pero finalmente a2.-->
+
+    <script>
+        let primerNum = prompt("Escribe un numero");
+        let segundNum = prompt("Escribe otro numero");
+
+        const concatenar = (primer, segun) => {
+            var concatenado = primer + segun;
+            console.log(concatenado);
+        };
+
+        const recibe = (primero, segundo) => {
+            if (isNaN(primero) || isNaN(segundo)) {
+                throw new Error("Un ou os dous parametros non son numeros");
+            } else {
+                let res = parseInt(primero) + parseInt(segundo);
+                console.log(res);
+            }
+        };
+
+        try {
+            recibe(primerNum, segundNum);
+        } catch (error) {
+            console.log(error.message);
+        } finally {
+            concatenar(primerNum, segundNum);
+        }
+    </script>
+</body>
+
+</html>
