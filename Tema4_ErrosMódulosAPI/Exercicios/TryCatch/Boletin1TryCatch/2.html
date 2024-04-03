@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--2. Crea unha función que converta unha cadea en número. 
+        Xestiona calquera erro que poidaocorrer durante a conversión. 
+        (erro xenérico). -->
+
+        <script>
+            const convertirANumero = (cadena) => {
+                try {
+                    const numero = Number(cadena);
+                    if (isNaN(numero)) {
+                        throw new Error('Non se pode convertir a cadea nun número');
+                    } else {
+                        return numero;
+                    }
+    
+    
+                } catch (error) {
+                    return error.message;
+                }
+            }
+    
+    
+            // Ejemplo de uso:
+            document.write(convertirANumero('123') + "<br>");
+            document.write(convertirANumero('abc10') + "<br>");
+            document.write(convertirANumero('10.5'));
+    
+    
+        </script>
+</body>
+
+</html>
