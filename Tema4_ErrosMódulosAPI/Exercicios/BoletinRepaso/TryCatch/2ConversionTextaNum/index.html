@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Solicita ao usuario que introduza un número
+      const textoUsuario = prompt("Por favor, introduce un número:");
+
+      try {
+        // Intenta converter o texto a número enteiro
+        const numero = parseInt(textoUsuario);
+        // Comproba se o resultado é un número válido
+        if (isNaN(numero)) {
+          // Se o resultado de parseInt é NaN, significa que a conversión fallou
+          throw new Error(
+            "O texto introducido non puido ser convertido a un número."
+          );
+        } else {
+          // Se a conversión é exitosa, amosa o número convertido
+          document.write(`O número convertido é: ${numero}<br>`);
+        }
+      } catch (error) {
+        // Xestiona calquera erro que ocorra durante a conversión
+        document.write(`${error.message}<br>`);
+      } finally {
+        // Este bloque execútase sempre, independentemente de se houbo un erro ou non
+        document.write("Intentouse realizar a conversión.<br>");
+      }
+    </script>
+  </body>
+</html>

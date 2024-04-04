@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Definindo o obxecto
+const obxecto = { nome: "Juan", idade: 30 };
+
+try {
+    // Intenta acceder á propiedade "apelido"
+    if (obxecto.apelido === undefined) {
+        // Se "apelido" non existe, lanza un erro personalizado
+        throw new Error("A propiedade 'apelido' non foi atopada no obxecto.  <br>");
+    }
+} catch (error) {
+    // Captura calquera erro lanzado no bloque try
+    document.write(error.message);
+} finally {
+    // Este bloque execútase sempre, independente de se houbo un erro ou non
+    document.write("Intentouse acceder á estrutura do obxecto.");
+}
+
+
+    </script>
+</body>
+</html>
