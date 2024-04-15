@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let email=/^[a-z0-9_.]+@[a-z0-9.]+\.[a-z]{2,4}$/i;
+        let comprobarEmail=prompt("Escribe el correo para comprobarlo.");
+
+        try{
+            if (email.test(comprobarEmail)){
+                document.write("El email es correcto");
+            } else {
+                throw new Error("Error: El email no tiene el formato correcto.");
+            }
+        } catch {
+            document.write(error.message);
+        } finally {
+            document.write("Comprobando el mensaje");
+        }
+    </script>
+</body>
+</html>
