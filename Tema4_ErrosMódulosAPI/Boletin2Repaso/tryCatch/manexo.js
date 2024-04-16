@@ -1,13 +1,11 @@
+var persona = {
+  nombre: "Juanillo",
+  apellidos: "Pérez",
+};
+
 try {
-    var persona = {
-      nombre: "Juanillo",
-      apellidos: "Pérez",
-    };
-    if(!persona.edad){
-        throw new Error("Error de rango: Non temos datos sobre a edad.");
-    } else {
-      document.write(persona.edad);
-    }
+      persona.edad;
+      throw new Error("Error: Non temos datos sobre a edad.");
   } catch (error) {
     document.write(error.message);
   } finally {
