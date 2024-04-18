@@ -72,7 +72,7 @@ localStorage.setItem('vehiculoInfo', JSON.stringify(vehiculoInfo));
 //guarda información en el almacenamiento local del navegador web
 const vehiculoGuardado = JSON.parse(localStorage.getItem('vehiculoInfo'));
 
-//recorre todas las propiedades del objeto
+//recorremos 
 for (const propiedad in vehiculoGuardado) {
     document.write(`${propiedad}: ${vehiculoGuardado[propiedad]} <br>`);
 };

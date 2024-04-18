@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="manexo.js"></script>
+  </head>
+  <body>
+    <div id="resultado"></div>
+    <script>
+      window.onload = function () {
+        var fechaActual = new Date();
+        var mesActual = fechaActual.getMonth() + 1;
+
+        if (mesActual == 4) {
+          obtenerUbicacion();
+        } else {
+          document.getElementById("resultado").innerText =`Non estamos no mes de abril`;
+        }
+      };
+    </script>
+  </body>
+</html>
